@@ -1,0 +1,6 @@
+@use "../abstract/functions" as fun;
+
+a {
+  text-decoration: none;
+  color: fun.theme-color("default-dark");
+}

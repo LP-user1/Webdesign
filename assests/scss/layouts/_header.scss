@@ -1,0 +1,40 @@
+@use "../abstract/variables" as var;
+@use "../abstract/functions" as fun;
+
+.header {
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  padding: 1rem 12rem;
+
+  & > a h2 {
+    font-family: var.$font-shadow-light;
+  }
+
+  & > a:hover {
+    color: fun.theme-color("default-dark-hover");
+  }
+
+  &--menu {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 1.5rem;
+
+    &--item {
+      list-style: none;
+
+      & > a {
+        font-size: 13px;
+        text-transform: uppercase;
+        letter-spacing: .1rem;
+        transition: all .2s cubic-bezier(0.455, 0.03, 0.515, 0.955);
+
+      }
+
+      & > a:hover {
+        color: fun.theme-color();
+      }
+    }
+  }
+}

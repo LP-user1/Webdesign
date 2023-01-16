@@ -1,0 +1,19 @@
+@use "../abstract/functions" as fun;
+
+.btn {
+  padding: .5rem 1.2rem;
+  border-radius: .4rem;
+  border: none;
+  outline: none;
+
+  &-primary {
+    @extend .btn;
+    background-color: fun.theme-color() !important;
+    color: fun.theme-color("default-white") !important;
+
+    &:hover {
+      background-color: fun.theme-color("primary-hover") !important;
+      color: fun.theme-color("default-white") !important;
+    }
+  }
+}
