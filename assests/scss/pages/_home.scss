@@ -1,0 +1,37 @@
+@use "../abstract/variables" as var;
+@use "../abstract/functions" as fun;
+
+.section {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 5rem 10rem;
+
+  &--container {
+    width: 50rem;
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
+    justify-content: flex-start;
+
+    & > h2 {
+      font-size: 1.8rem;
+      font-weight: 500;
+      color: fun.theme-color("default-dark");
+    }
+
+    &--desc {
+      font-family: var.$font-inter;
+      line-height: 1.5;
+      color: rgba(128, 128, 128, 0.875);
+    }
+
+  }
+
+  &--illustration {
+    width: 70rem;
+    height: 100%;
+  }
+}

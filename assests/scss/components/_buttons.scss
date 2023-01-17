@@ -5,6 +5,7 @@
   border-radius: .4rem;
   border: none;
   outline: none;
+  cursor: pointer;
 
   &-primary {
     @extend .btn;
@@ -14,6 +15,19 @@
     &:hover {
       background-color: fun.theme-color("primary-hover") !important;
       color: fun.theme-color("default-white") !important;
+    }
+  }
+
+  &-outline-primary {
+    @extend .btn;
+    border: .1rem solid fun.theme-color() !important;
+    color: fun.theme-color();
+    background-color: transparent !important;
+    transition: all .5s cubic-bezier(0.19, 1, 0.22, 1);
+
+    &:hover {
+      background-color: fun.theme-color() !important;
+      color: fun.theme-color("default-white");
     }
   }
 }

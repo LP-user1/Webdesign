@@ -1,0 +1,102 @@
+@use "../abstract/functions" as fun;
+
+.background-shapes {
+
+  .box1 {
+    position: absolute;
+    top: 14%;
+    left: 8%;
+    width: .7rem;
+    height: .7rem;
+    border-radius: .19rem;
+    background-color: transparent;
+    border: .1rem solid fun.theme-color();
+    transition: animation .2s cubic-bezier(0.215, 0.610, 0.355, 1);
+    animation: rotate 9s linear infinite;
+    z-index: -1;
+  }
+
+  .box2 {
+    position: absolute;
+    bottom: 30%;
+    left: 34%;
+    width: .7rem;
+    height: .7rem;
+    border-radius: .19rem;
+    background-color: transparent;
+    border: .1rem solid fun.theme-color("default-dark");
+    transition: animation .2s cubic-bezier(0.215, 0.610, 0.355, 1);
+    animation: rotate 9s linear infinite;
+    z-index: -1;
+  }
+
+  .box3 {
+    position: absolute;
+    bottom: 14%;
+    right: 5%;
+    width: .7rem;
+    height: .7rem;
+    border-radius: .19rem;
+    background-color: transparent;
+    border: .1rem solid rgb(19, 151, 138);
+    transition: animation .2s cubic-bezier(0.215, 0.610, 0.355, 1);
+    animation: rotate 9s linear infinite;
+    z-index: -1;
+  }
+
+  .circle1 {
+    position: absolute;
+    top: 54%;
+    left: 5%;
+    width: .7rem;
+    height: .7rem;
+    border-radius: 50%;
+    background-color: transparent;
+    border: .1rem solid fun.theme-color();
+    transition: animation .2s cubic-bezier(0.215, 0.610, 0.355, 1);
+    animation: rotate 9s linear infinite;
+    z-index: -1;
+  }
+
+  .circle2 {
+    position: absolute;
+    bottom: 10%;
+    left: 18%;
+    width: .7rem;
+    height: .7rem;
+    border-radius: 50%;
+    background-color: transparent;
+    border: .1rem solid fun.theme-color("default-dark");
+    transition: animation .2s cubic-bezier(0.215, 0.610, 0.355, 1);
+    animation: rotate 9s linear infinite;
+    z-index: -1;
+  }
+
+  .circle3 {
+    position: absolute;
+    bottom: 24%;
+    right: 12%;
+    width: .7rem;
+    height: .7rem;
+    border-radius: 50%;
+    background-color: transparent;
+    border: .1rem solid rgb(46, 195, 177);
+    transition: animation .2s cubic-bezier(0.215, 0.610, 0.355, 1);
+    animation: rotate 9s linear infinite;
+    z-index: -1;
+  }
+
+  .circle4 {
+    position: absolute;
+    top: 16%;
+    right: 5%;
+    width: .7rem;
+    height: .7rem;
+    border-radius: 50%;
+    background-color: transparent;
+    border: .1rem solid rgb(19, 151, 138);
+    transition: animation .2s cubic-bezier(0.215, 0.610, 0.355, 1);
+    animation: rotate 9s linear infinite;
+    z-index: -1;
+  }
+}

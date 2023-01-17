@@ -1,0 +1,30 @@
+$spacing: 1, 2, 3, 4, 5, 6, 8, 10, 12;
+$directions: "t" "top", "e" "right", "b" "bottom", "s" "left";
+
+
+@each $space in $spacing {
+  .m-#{$space} {
+    margin: #{$space}rem;
+  }
+
+  @each $key,
+  $direction in $directions {
+    .m#{$key}-#{$space} {
+      margin-#{$direction}: #{$space}rem;
+    }
+  }
+
+  .p-#{$space} {
+    padding: #{$space}rem;
+  }
+
+  @each $key,
+  $direction in $directions {
+    .p#{$key}-#{$space} {
+      padding-#{$direction}: #{$space}rem;
+    }
+  }
+
+}
+
+;
