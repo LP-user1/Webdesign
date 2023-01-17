@@ -124,8 +124,8 @@ a {
 }
 .background-shapes .circle2 {
   position: absolute;
-  bottom: 10%;
-  left: 18%;
+  bottom: 8%;
+  left: 22%;
   width: 0.7rem;
   height: 0.7rem;
   border-radius: 50%;
@@ -137,8 +137,8 @@ a {
 }
 .background-shapes .circle3 {
   position: absolute;
-  bottom: 24%;
-  right: 12%;
+  bottom: 14%;
+  right: 18%;
   width: 0.7rem;
   height: 0.7rem;
   border-radius: 50%;
@@ -161,35 +161,85 @@ a {
   animation: rotate 9s linear infinite;
   z-index: -1;
 }
+.background-shapes .dot1 {
+  position: absolute;
+  bottom: 7%;
+  left: 50%;
+  width: 0.3rem;
+  height: 0.3rem;
+  background-color: #1e90ff;
+  z-index: -1;
+}
+.background-shapes .dot2 {
+  position: absolute;
+  top: 12%;
+  right: 47%;
+  width: 0.3rem;
+  height: 0.3rem;
+  background-color: #1e90ff;
+  z-index: -1;
+}
+.background-shapes .dot3 {
+  position: absolute;
+  top: 15%;
+  left: 10%;
+  width: 0.3rem;
+  height: 0.3rem;
+  background-color: #1e90ff;
+  z-index: -1;
+}
 
-.section {
+.hero-area {
   width: 100%;
-  height: 100%;
+  height: 100vh;
   display: flex;
   justify-content: space-between;
   align-items: center;
-  padding: 5rem 10rem;
+  padding: 8rem 10rem;
 }
-.section--container {
-  width: 50rem;
+.hero-area--container {
+  height: 100%;
   display: flex;
   flex-direction: column;
   gap: 2rem;
   justify-content: flex-start;
 }
-.section--container > h2 {
+.hero-area--container > h2 {
   font-size: 1.8rem;
   font-weight: 500;
   color: rgba(0, 0, 0, 0.905);
 }
-.section--container--desc {
+.hero-area--container--desc {
   font-family: "Inter", sans-serif;
   line-height: 1.5;
   color: rgba(128, 128, 128, 0.875);
 }
-.section--illustration {
-  width: 70rem;
+.hero-area--illustration {
+  width: 80rem;
   height: 100%;
+}
+
+.about-area {
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background-color: #1e90ff;
+  padding: 4rem 12rem;
+  gap: 1rem;
+}
+.about-area--illustration > svg {
+  width: 30rem;
+}
+.about-area--container h2 {
+  color: #fff;
+  font-weight: 500;
+  font-size: 3rem;
+}
+.about-area--container p {
+  color: #ddd;
+  font-size: 15px;
+  line-height: 2;
 }
 
 .m-1 {

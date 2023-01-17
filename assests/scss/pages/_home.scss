@@ -1,16 +1,16 @@
 @use "../abstract/variables" as var;
 @use "../abstract/functions" as fun;
 
-.section {
+.hero-area {
   width: 100%;
-  height: 100%;
+  height: 100vh;
   display: flex;
   justify-content: space-between;
   align-items: center;
-  padding: 5rem 10rem;
+  padding: 8rem 10rem;
 
   &--container {
-    width: 50rem;
+    height: 100%;
     display: flex;
     flex-direction: column;
     gap: 2rem;
@@ -31,7 +31,7 @@
   }
 
   &--illustration {
-    width: 70rem;
+    width: 80rem;
     height: 100%;
   }
 }

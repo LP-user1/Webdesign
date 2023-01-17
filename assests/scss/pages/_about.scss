@@ -1,0 +1,29 @@
+@use "../abstract/functions" as fun;
+
+.about-area {
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background-color: fun.theme-color();
+  padding: 4rem 12rem;
+  gap: 1rem;
+
+  &--illustration > svg {
+    width: 30rem;
+  }
+
+  &--container {
+    & h2 {
+      color: fun.theme-color("default-white");
+      font-weight: 500;
+      font-size: 3rem;
+    }
+
+    & p {
+      color: #ddd;
+      font-size: 15px;
+      line-height: 2;
+    }
+  }
+}
