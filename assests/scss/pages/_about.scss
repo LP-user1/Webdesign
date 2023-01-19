@@ -6,8 +6,9 @@
   justify-content: space-between;
   align-items: center;
   background-color: fun.theme-color();
-  padding: 4rem 12rem;
+  padding: 7rem 12rem;
   gap: 1rem;
+  clip-path: polygon(100% 100%, 100% 0, 0 0, 0 100%, 28% 81%);
 
   &--illustration > svg {
     width: 30rem;

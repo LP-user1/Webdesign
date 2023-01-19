@@ -244,8 +244,9 @@ a {
   justify-content: space-between;
   align-items: center;
   background-color: #1e90ff;
-  padding: 4rem 12rem;
+  padding: 7rem 12rem;
   gap: 1rem;
+  clip-path: polygon(100% 100%, 100% 0, 0 0, 0 100%, 28% 81%);
 }
 .about-area--illustration > svg {
   width: 30rem;
@@ -302,11 +303,14 @@ a {
   padding: 1rem;
   border: 0.1rem solid rgba(0, 0, 0, 0.905);
   border-radius: 0.8rem;
+  box-shadow: 7.1px 7.1px 1px rgba(0, 0, 0, 0.556);
+  z-index: 1;
+  transition: all 500ms cubic-bezier(0.25, 0.46, 0.45, 0.94);
 }
 .roadmap--item:hover {
-  transition: all 500ms cubic-bezier(0.25, 0.46, 0.45, 0.94);
   border-radius: 0.6rem;
-  box-shadow: 1.1px 1.1px 0.6px rgba(0, 0, 0, 0.036), 3.6px 3.8px 2px rgba(0, 0, 0, 0.054), 16px 17px 9px rgba(0, 0, 0, 0.09);
+  box-shadow: 1.1px 1.1px 0.6px rgba(0, 0, 0, 0.896), 3.6px 3.8px 2px rgba(0, 0, 0, 0.568), 16px 17px 7px rgba(0, 0, 0, 0.438);
+  z-index: 2;
 }
 .roadmap--item_img {
   width: 8rem;
@@ -329,6 +333,56 @@ a {
 .roadmap--item p {
   font-size: 14px;
   line-height: 1.5;
+}
+
+.course {
+  width: 100%;
+  height: 100%;
+  padding: 10rem 0;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 2rem;
+  background-color: #1e90ff;
+  clip-path: polygon(0 14%, 100% 0%, 100% 86%, 0% 100%);
+}
+.course--heading {
+  text-align: center;
+}
+.course--item {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 3rem;
+}
+.course--item-card {
+  width: 16rem;
+  border-radius: 1.5rem;
+  background-color: rgba(0, 0, 0, 0.905);
+}
+.course--item-card_img {
+  width: 100%;
+  height: 11rem;
+  border-radius: 1.5rem;
+  overflow: hidden;
+}
+.course--item-card_img > img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: all 1s cubic-bezier(0.25, 0.46, 0.45, 0.94);
+}
+.course--item-card_img > img:hover {
+  transform-origin: top;
+  transform: scale(1.2);
+}
+.course--item-card_body {
+  padding: 1rem;
+  font-size: 14px;
+  color: #fff;
 }
 
 .m-1 {
