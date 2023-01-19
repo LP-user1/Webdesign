@@ -18,6 +18,17 @@
     }
   }
 
+  &-secondary {
+    @extend .btn;
+    background-color: fun.theme-color("secondary") !important;
+    color: fun.theme-color("default-white") !important;
+
+    &:hover {
+      background-color: fun.theme-color("secondary-hover") !important;
+      color: fun.theme-color("default-white") !important;
+    }
+  }
+
   &-outline-primary {
     @extend .btn;
     border: .1rem solid fun.theme-color() !important;

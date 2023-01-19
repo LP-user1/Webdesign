@@ -4,24 +4,24 @@ $directions: "t" "top", "e" "right", "b" "bottom", "s" "left";
 
 @each $space in $spacing {
   .m-#{$space} {
-    margin: #{$space}rem;
+    margin: #{$space}rem !important;
   }
 
   @each $key,
   $direction in $directions {
     .m#{$key}-#{$space} {
-      margin-#{$direction}: #{$space}rem;
+      margin-#{$direction}: #{$space}rem !important;
     }
   }
 
   .p-#{$space} {
-    padding: #{$space}rem;
+    padding: #{$space}rem !important;
   }
 
   @each $key,
   $direction in $directions {
     .p#{$key}-#{$space} {
-      padding-#{$direction}: #{$space}rem;
+      padding-#{$direction}: #{$space}rem !important;
     }
   }
 
