@@ -30,4 +30,32 @@
       color: fun.theme-color("default-white");
     }
   }
+
+
+  &-dark {
+    @extend .btn;
+    color: fun.theme-color("default-white");
+    background-color: fun.theme-color("default-dark") !important;
+    transition: all .5s cubic-bezier(0.19, 1, 0.22, 1);
+
+    &:hover {
+      background-color: fun.theme-color("default-dark-hover") !important;
+      color: fun.theme-color("default-white");
+    }
+
+  }
+
+  &-outline-dark {
+    @extend .btn;
+    border: .1rem solid fun.theme-color("default-dark") !important;
+    color: fun.theme-color("default-dark");
+    background-color: transparent !important;
+    transition: all .5s cubic-bezier(0.19, 1, 0.22, 1);
+
+    &:hover {
+      background-color: fun.theme-color("default-dark") !important;
+      color: fun.theme-color("default-white");
+    }
+
+  }
 }

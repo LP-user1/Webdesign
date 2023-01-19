@@ -13,7 +13,7 @@ a {
   color: rgba(0, 0, 0, 0.905);
 }
 
-.btn, .btn-outline-primary, .btn-primary {
+.btn, .btn-outline-dark, .btn-dark, .btn-outline-primary, .btn-primary {
   padding: 0.5rem 1.2rem;
   border-radius: 0.4rem;
   border: none;
@@ -36,6 +36,25 @@ a {
 }
 .btn-outline-primary:hover {
   background-color: #1e90ff !important;
+  color: #fff;
+}
+.btn-dark {
+  color: #fff;
+  background-color: rgba(0, 0, 0, 0.905) !important;
+  transition: all 0.5s cubic-bezier(0.19, 1, 0.22, 1);
+}
+.btn-dark:hover {
+  background-color: rgba(0, 0, 0, 0.513) !important;
+  color: #fff;
+}
+.btn-outline-dark {
+  border: 0.1rem solid rgba(0, 0, 0, 0.905) !important;
+  color: rgba(0, 0, 0, 0.905);
+  background-color: transparent !important;
+  transition: all 0.5s cubic-bezier(0.19, 1, 0.22, 1);
+}
+.btn-outline-dark:hover {
+  background-color: rgba(0, 0, 0, 0.905) !important;
   color: #fff;
 }
 
@@ -240,6 +259,76 @@ a {
   color: #ddd;
   font-size: 15px;
   line-height: 2;
+}
+
+.roadmap {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  padding: 4rem 12rem;
+  gap: 2rem;
+}
+.roadmap--heading {
+  text-align: center;
+}
+.roadmap--heading > h2 {
+  font-weight: 500;
+}
+.roadmap--heading > p {
+  font-size: 15px;
+}
+.roadmap--heading-line {
+  margin: 0 auto;
+  margin-top: 0.5rem;
+  width: 5rem;
+  height: 0.4rem;
+  border-radius: 0.5rem;
+  background: linear-gradient(to right, rgb(255, 118, 33), #1e90ff, rgba(195, 255, 42, 0.942));
+}
+.roadmap--items {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 2rem;
+}
+.roadmap--items-Rightarrow > svg {
+  width: 2rem;
+  height: 2rem;
+}
+.roadmap--item {
+  text-align: center;
+  width: 15rem;
+  padding: 1rem;
+  border: 0.1rem solid rgba(0, 0, 0, 0.905);
+  border-radius: 0.8rem;
+}
+.roadmap--item:hover {
+  transition: all 500ms cubic-bezier(0.25, 0.46, 0.45, 0.94);
+  border-radius: 0.6rem;
+  box-shadow: 1.1px 1.1px 0.6px rgba(0, 0, 0, 0.036), 3.6px 3.8px 2px rgba(0, 0, 0, 0.054), 16px 17px 9px rgba(0, 0, 0, 0.09);
+}
+.roadmap--item_img {
+  width: 8rem;
+  height: 8rem;
+  margin: auto;
+  border-radius: 50%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 2rem;
+}
+.roadmap--item_img img {
+  width: 5rem;
+  height: 5rem;
+  object-fit: cover;
+}
+.roadmap--item h4 {
+  font-weight: 500;
+}
+.roadmap--item p {
+  font-size: 14px;
+  line-height: 1.5;
 }
 
 .m-1 {
