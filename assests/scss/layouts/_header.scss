@@ -1,18 +1,46 @@
 @use "../abstract/variables" as var;
 @use "../abstract/functions" as fun;
+@use "../abstract/mixins" as mixin;
 
 .header {
   width: 100%;
-  display: flex;
-  justify-content: space-between;
-  padding: 1rem 9rem;
+  background-color: fun.theme-color("default-white");
+  z-index: 10;
 
-  & > a h2 {
-    font-family: var.$font-shadow-light;
+  @include mixin.responsive(xs) {
+    position: fixed;
   }
 
-  & > a:hover {
-    color: fun.theme-color("default-dark-hover");
+  & > div {
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    padding: 1rem 9rem;
+
+    @include mixin.responsive(xs) {
+      padding: 1rem 2rem;
+    }
+
+    & > a h2 {
+      font-family: var.$font-shadow-light;
+
+      @include mixin.responsive(xs) {
+        font-size: 1.2rem;
+      }
+    }
+
+    & > a:hover {
+      color: fun.theme-color("default-dark-hover");
+    }
+
+    .nav-toggler > box-icon {
+      display: none;
+
+      @include mixin.responsive(xs) {
+        display: block;
+        font-size: 1rem;
+      }
+    }
   }
 
   &--menu {
@@ -20,6 +48,10 @@
     justify-content: space-between;
     align-items: center;
     gap: 1.5rem;
+
+    @include mixin.responsive(xs) {
+      display: none;
+    }
 
     &--item {
       list-style: none;
@@ -37,4 +69,5 @@
       }
     }
   }
+
 }

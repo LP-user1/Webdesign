@@ -1,4 +1,5 @@
 @use "../abstract/functions" as fun;
+@use "../abstract/mixins" as mixin;
 
 .roadmap {
   display: flex;
@@ -7,6 +8,10 @@
   align-items: center;
   padding: 4rem 12rem;
   gap: 2rem;
+
+  @include mixin.responsive(xs) {
+    padding: 3rem 2rem;
+  }
 
   &--heading {
     text-align: center;
@@ -35,9 +40,17 @@
     align-items: center;
     gap: 2rem;
 
+    @include mixin.responsive(xs) {
+      flex-direction: column;
+    }
+
     &-Rightarrow > svg {
       width: 2rem;
       height: 2rem;
+
+      @include mixin.responsive(xs) {
+        transform: rotate(94deg);
+      }
     }
   }
 
@@ -52,6 +65,9 @@
     z-index: 1;
     transition: all 500ms cubic-bezier(0.25, 0.46, 0.45, 0.94);
 
+    @include mixin.responsive(xs) {
+      width: 100%;
+    }
 
     &:hover {
       border-radius: .6rem;
@@ -72,10 +88,20 @@
       align-items: center;
       padding: 2rem;
 
+      @include mixin.responsive(xs) {
+        width: 6rem;
+        height: 6rem;
+      }
+
       img {
         width: 5rem;
         height: 5rem;
         object-fit: cover;
+
+        @include mixin.responsive(xs) {
+          width: 3rem;
+          height: 3rem;
+        }
       }
     }
 

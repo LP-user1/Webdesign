@@ -1,3 +1,5 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;700&family=Poppins:wght@100;200;300;400;700&family=Shadows+Into+Light&display=swap');
+
 // base
 @import "./base/reset";
 @import "./base/global";
@@ -9,13 +11,17 @@
 @import "./layouts/header";
 @import "./layouts/background_elements";
 
+// utilities
+@import "./utilities/spacing";
+@import "./utilities/animations";
+
 // pages
 @import "./pages/home";
 @import "./pages/about";
 @import "./pages/roadmap";
 @import "./pages/course";
 @import "./pages/contact";
+@import "./pages/footer";
 
-// utilities
-@import "./utilities/spacing";
-@import "./utilities/animations";
+// abstract
+@import "./abstract/mixins";

@@ -1,4 +1,5 @@
 @use "../abstract/functions" as fun;
+@use "../abstract/mixins" as mixin;
 
 .contact--area {
   width: 100%;
@@ -8,6 +9,10 @@
   justify-content: center;
   align-items: flex-start;
   padding: 6rem;
+
+  @include mixin.responsive(xs) {
+    padding: 4rem 3rem;
+  }
 
   &-heading > h2 {
     font-weight: 400;
@@ -24,6 +29,11 @@
     justify-content: center;
     align-items: center;
     gap: 3rem;
+
+    @include mixin.responsive(xs) {
+      flex-direction: column-reverse;
+      align-items: initial;
+    }
 
     &_img {
       width: 100%;

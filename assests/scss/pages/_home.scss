@@ -1,5 +1,6 @@
 @use "../abstract/variables" as var;
 @use "../abstract/functions" as fun;
+@use "../abstract/mixins" as mixin;
 
 .hero-area {
   width: 100%;
@@ -8,6 +9,11 @@
   justify-content: space-between;
   align-items: center;
   padding: 8rem 10rem;
+
+  @include mixin.responsive(xs) {
+    padding: 2rem;
+    flex-direction: column-reverse;
+  }
 
   &--container {
     width: 100%;
@@ -21,12 +27,21 @@
       font-size: 1.8rem;
       font-weight: 500;
       color: fun.theme-color("default-dark");
+
+      @include mixin.responsive(xs) {
+        font-size: 1.4rem;
+      }
     }
 
     &--desc {
       font-family: var.$font-inter;
       line-height: 1.5;
       color: rgba(128, 128, 128, 0.875);
+
+      @include mixin.responsive(xs) {
+        font-size: .9rem;
+        line-height: 1.3;
+      }
     }
 
   }
@@ -34,5 +49,9 @@
   &--illustration {
     width: 100%;
     height: 100%;
+
+    @include mixin.responsive(xs) {
+      margin-top: 6rem;
+    }
   }
 }

@@ -1,4 +1,5 @@
 @use "../abstract/functions" as fun;
+@use "../abstract/mixins" as mixin;
 
 .course {
   width: 100%;
@@ -12,8 +13,27 @@
   background-color: fun.theme-color();
   clip-path: polygon(0 14%, 100% 0%, 100% 86%, 0% 100%);
 
+  @include mixin.responsive(xs) {
+    clip-path: polygon(100% 0, 0 4%, 0 100%, 100% 96%);
+    padding: 10rem 2rem;
+  }
+
   &--heading {
     text-align: center;
+
+    h2 {
+      font-weight: 500;
+
+      @include mixin.responsive(xs) {
+        font-size: 1.2rem;
+      }
+    }
+
+    p {
+      @include mixin.responsive(xs) {
+        font-size: .9rem;
+      }
+    }
   }
 
   &--item {
@@ -23,6 +43,10 @@
     justify-content: center;
     align-items: center;
     gap: 3rem;
+
+    @include mixin.responsive(xs) {
+      flex-direction: column;
+    }
 
     &-card {
       width: 16rem;

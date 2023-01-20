@@ -1,4 +1,5 @@
 @use "../abstract/functions" as fun;
+@use "../abstract/mixins" as mixin;
 
 .about-area {
   width: 100%;
@@ -10,8 +11,19 @@
   gap: 1rem;
   clip-path: polygon(100% 100%, 100% 0, 0 0, 0 100%, 28% 81%);
 
+  @include mixin.responsive(xs) {
+    flex-direction: column;
+    padding: 1rem 2rem;
+    padding-bottom: 10rem;
+    clip-path: polygon(100% 0, 0 0, 0 100%, 19% 89%, 100% 100%);
+  }
+
   &--illustration > svg {
     width: 30rem;
+
+    @include mixin.responsive(xs) {
+      width: 100%;
+    }
   }
 
   &--container {
@@ -19,12 +31,22 @@
       color: fun.theme-color("default-white");
       font-weight: 500;
       font-size: 3rem;
+
+      @include mixin.responsive(xs) {
+        font-size: 1.5rem;
+        margin-bottom: .5rem;
+      }
     }
 
     & p {
       color: #ddd;
       font-size: 15px;
       line-height: 2;
+
+      @include mixin.responsive(xs) {
+        line-height: 1.5;
+        font-size: .9rem;
+      }
     }
   }
 }
