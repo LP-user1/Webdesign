@@ -21,18 +21,29 @@
   @include mixin.responsive(sm) {
     padding: 1rem 2rem;
     padding-bottom: 6rem;
+    gap: 3rem;
     clip-path: polygon(100% 0, 0 0, 0 100%, 19% 89%, 100% 100%);
   }
 
   @include mixin.responsive(md) {
     padding: 4rem 3rem;
-    gap: 2rem;
+    gap: 4rem;
     padding-bottom: 5rem;
   }
 
   @include mixin.responsive(lg) {
     padding: 4rem;
+    gap: 7rem;
     padding-bottom: 6rem;
+  }
+
+  @include mixin.responsive(xl) {
+    padding: 9rem;
+    clip-path: polygon(100% 100%, 100% 0, 0 0, 0 100%, 28% 81%);
+  }
+
+  @include mixin.responsive(xxl) {
+    padding: 6rem 7rem;
   }
 
   &--illustration > svg {
@@ -52,6 +63,14 @@
 
     @include mixin.responsive(lg) {
       width: 22rem;
+    }
+
+    @include mixin.responsive(xl) {
+      width: 28rem;
+    }
+
+    @include mixin.responsive(xxl) {
+      width: 30rem;
     }
   }
 
@@ -86,18 +105,18 @@
       line-height: 2;
 
       @include mixin.responsive(xs) {
-        line-height: 1.5;
+        line-height: 1.2;
         font-size: .9rem;
       }
 
       @include mixin.responsive(sm) {
         font-size: .9rem;
-        line-height: 1.4;
+        line-height: 1.3;
       }
 
       @include mixin.responsive(md) {
         line-height: 1.5;
-        font-size: 1rem;
+        font-size: .99rem;
       }
     }
   }

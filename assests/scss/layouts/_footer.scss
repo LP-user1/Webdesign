@@ -8,8 +8,8 @@
   display: flex;
   justify-content: center;
   align-items: flex-start;
-  flex-direction: column;
-  gap: 2rem;
+  flex-direction: column-reverse;
+  gap: 1.5rem;
   background-color: fun.theme-color("default-dark");
 
   @include mixin.responsive(xs) {
@@ -19,15 +19,12 @@
 
   @include mixin.responsive(sm) {
     padding: 2rem;
-    align-items: initial;
-  }
-
-  @include mixin.responsive(md) {
-    padding: 2rem 5rem;
+    gap: 2rem;
+    align-items: center;
   }
 
   @include mixin.responsive(lg) {
-    padding: 2rem 7.5rem;
+    padding: 2rem 5rem;
   }
 
   & h2 {
@@ -52,22 +49,44 @@
     display: flex;
     justify-content: space-between;
     align-items: flex-start;
-    // padding: 0 5rem;
+    gap: 1rem;
+
 
     @include mixin.responsive(xs) {
+      justify-content: flex-start;
+      align-items: flex-start;
       flex-direction: column;
-      gap: 2rem;
+    }
+
+    @include mixin.responsive(sm) {
+      flex-direction: row;
       justify-content: flex-start;
       align-items: flex-start;
     }
 
     &_links {
+      width: 100%;
+      display: flex;
+      justify-content: flex-start;
+      flex-direction: column;
+      gap: .1rem;
       color: fun.theme-color("default-white");
 
+      @include mixin.responsive(xs) {
+        align-items: flex-start;
+      }
+
+      @include mixin.responsive(sm) {
+        align-items: flex-start;
+      }
+
+      @include mixin.responsive(md) {
+        align-items: center;
+      }
 
       ul > li {
         list-style: none;
-        line-height: 2;
+        line-height: 1.7;
 
         @include mixin.responsive(xs) {
           line-height: 1.7;
@@ -75,10 +94,6 @@
 
         @include mixin.responsive(sm) {
           line-height: 1.7;
-        }
-
-        @include mixin.responsive(md) {
-          line-height: 1.9;
         }
 
         a {
@@ -105,17 +120,16 @@
           color: fun.theme-color();
         }
 
-        & > a > box-icon {
+        & > a > i {
           transition: all 500ms cubic-bezier(0.19, 1, 0.22, 1);
-          background-color: fun.theme-color("default-white");
-          border-radius: 50%;
+          font-size: 1.5rem;
 
           @include mixin.responsive(xs) {
-            font-size: .7rem;
+            font-size: 1rem;
           }
 
           &:hover {
-            background-color: fun.theme-color();
+            color: fun.theme-color();
 
           }
         }
@@ -130,16 +144,22 @@
       align-items: center;
       color: fun.theme-color("default-white");
 
-      h2 box-icon {
-        background-color: fun.theme-color("default-white");
+      h2 i {
+        @include mixin.responsive(sm) {
+          font-size: 1rem;
+        }
       }
 
       h2 a {
         color: fun.theme-color("default-white");
+
+        &:hover {
+          text-decoration: underline;
+        }
       }
 
       h2 {
-        margin-bottom: 1.3rem;
+        margin-bottom: .2rem;
 
         @include mixin.responsive(xs) {
           font-size: 1rem;
@@ -155,6 +175,11 @@
       }
 
       p {
+        i {
+          color: rgb(255, 19, 19);
+          font-size: 1.5rem;
+        }
+
         @include mixin.responsive(xs) {
           font-size: .7rem;
         }
@@ -166,6 +191,7 @@
         @include mixin.responsive(md) {
           font-size: .8rem;
         }
+
       }
     }
   }

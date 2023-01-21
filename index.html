@@ -12,6 +12,11 @@
     />
     <!-- External css complied with scss -->
     <link rel="stylesheet" href="./assests/css/style.css" />
+    <!-- CDN Link for box icons -->
+    <link
+      href="https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css"
+      rel="stylesheet"
+    />
   </head>
   <body>
     <!-- ========== Start header ========== -->
@@ -21,7 +26,7 @@
           <h2>Web-Design ( LP )</h2>
         </a>
         <div class="nav-toggler">
-          <box-icon name="menu"></box-icon>
+          <i class="bx bx-menu"></i>
         </div>
         <ul class="header--menu">
           <li class="header--menu--item">
@@ -586,7 +591,7 @@
           </svg>
         </div>
         <div class="about-area--container">
-          <h2>About Me</h2>
+          <h2>About Us</h2>
           <p>
             Lorem, ipsum dolor sit amet consectetur adipisicing elit. Voluptate
             aliquam repellendus rem, dolorem fugit distinctio tenetur soluta
@@ -616,12 +621,7 @@
             <p class="mb-1">Structure the Web Page you want</p>
           </div>
           <div class="roadmap--items-Rightarrow">
-            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512">
-              <path
-                fill="currentColor"
-                d="M320 408c0-6.428-.846-12.66-2.434-18.6C338.2 376.7 352 353.9 352 328c0-6.428-.846-12.66-2.434-18.6C370.2 296.7 384 273.9 384 248c0-2.705-.148-5.373-.441-8H440c39.7 0 72-32.3 72-72s-32.3-72-72-72H243.7c-16.2-19.49-40.5-32-67.7-32h-49.9C94.02 64 64.47 81.1 49 108.6l-31.35 55.9C6.104 185.1 0 208.4 0 231.8v107.9C0 417.1 64.6 480 144 480h104c39.7 0 72-32.3 72-72zm-40-104c13.23 0 24 10.78 24 24s-10.8 24-24 24h-47.9c-13.2 0-24.1-10.8-24.1-24s10.8-24 24-24h48zm32-80c13.23 0 24 10.78 24 24s-10.8 24-24 24h-48c-3.029 0-5.875-.701-8.545-1.73C260.7 259.9 264 248.4 264 236v-12h48zm128-80c13.23 0 24 10.78 24 24s-10.8 24-24 24H264v-40c0-2.686-.557-5.217-.793-7.84c.293.04.493-.16.793-.16h176zM48 339.7V231.8c0-15.25 3.984-30.41 11.52-43.88l31.34-55.78C97.84 119.7 111.4 112 126.1 112H176c22.06 0 40 17.94 40 40v84c0 15.44-12.56 28-28 28s-28-12.6-28-28v-52c0-13.2-10.7-24-24-24s-24 10.8-24 24v52c0 33.23 21.58 61.25 51.36 71.54C161.3 314 160 320.9 160 328c0 5.041 1.166 9.836 2.178 14.66C137.4 354 120 378.1 120 408c0 7.684 1.557 14.94 3.836 21.87C80.56 420.9 48 383.9 48 339.7zM192 432c-13.23 0-24-10.78-24-24s10.8-24 24-24h56c13.23 0 24 10.78 24 24s-10.77 24-24 24h-56z"
-              />
-            </svg>
+            <i class="bx bx-chevron-right"></i>
           </div>
           <div class="roadmap--item">
             <div class="roadmap--item_img">
@@ -634,12 +634,7 @@
             <p class="mb-1">Style your Web Page as your wish</p>
           </div>
           <div class="roadmap--items-Rightarrow">
-            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512">
-              <path
-                fill="currentColor"
-                d="M320 408c0-6.428-.846-12.66-2.434-18.6C338.2 376.7 352 353.9 352 328c0-6.428-.846-12.66-2.434-18.6C370.2 296.7 384 273.9 384 248c0-2.705-.148-5.373-.441-8H440c39.7 0 72-32.3 72-72s-32.3-72-72-72H243.7c-16.2-19.49-40.5-32-67.7-32h-49.9C94.02 64 64.47 81.1 49 108.6l-31.35 55.9C6.104 185.1 0 208.4 0 231.8v107.9C0 417.1 64.6 480 144 480h104c39.7 0 72-32.3 72-72zm-40-104c13.23 0 24 10.78 24 24s-10.8 24-24 24h-47.9c-13.2 0-24.1-10.8-24.1-24s10.8-24 24-24h48zm32-80c13.23 0 24 10.78 24 24s-10.8 24-24 24h-48c-3.029 0-5.875-.701-8.545-1.73C260.7 259.9 264 248.4 264 236v-12h48zm128-80c13.23 0 24 10.78 24 24s-10.8 24-24 24H264v-40c0-2.686-.557-5.217-.793-7.84c.293.04.493-.16.793-.16h176zM48 339.7V231.8c0-15.25 3.984-30.41 11.52-43.88l31.34-55.78C97.84 119.7 111.4 112 126.1 112H176c22.06 0 40 17.94 40 40v84c0 15.44-12.56 28-28 28s-28-12.6-28-28v-52c0-13.2-10.7-24-24-24s-24 10.8-24 24v52c0 33.23 21.58 61.25 51.36 71.54C161.3 314 160 320.9 160 328c0 5.041 1.166 9.836 2.178 14.66C137.4 354 120 378.1 120 408c0 7.684 1.557 14.94 3.836 21.87C80.56 420.9 48 383.9 48 339.7zM192 432c-13.23 0-24-10.78-24-24s10.8-24 24-24h56c13.23 0 24 10.78 24 24s-10.77 24-24 24h-56z"
-              />
-            </svg>
+            <i class="bx bx-chevron-right"></i>
           </div>
           <div class="roadmap--item">
             <div class="roadmap--item_img">
@@ -648,7 +643,7 @@
                 alt="JS logo in LP design"
               />
             </div>
-            <h4 class="mb-1">JS</h4>
+            <h4 class="mb-1">JavaScript</h4>
             <p class="mb-1">Interact the Web page with JS</p>
           </div>
         </div>
@@ -950,7 +945,7 @@
                 href="https://github.com/LP-user1"
                 target="_blank"
                 rel="noopener noreferrer"
-                ><box-icon type="logo" name="github"></box-icon
+                ><i class="bx bxl-github"></i
               ></a>
             </li>
             <li>
@@ -958,7 +953,7 @@
                 href="https://https://instagram.com/prasa_th_/"
                 target="_blank"
                 rel="noopener noreferrer"
-                ><box-icon type="logo" name="instagram-alt"></box-icon
+                ><i class="bx bxl-instagram-alt"></i
               ></a>
             </li>
             <li>
@@ -966,7 +961,7 @@
                 href="https://lp-user1.github.io/portfolio"
                 target="_blank"
                 rel="noopener noreferrer"
-                ><box-icon name="link"></box-icon
+                ><i class="bx bx-link-alt"></i
               ></a>
             </li>
             <li>
@@ -974,7 +969,7 @@
                 href="https://www.linkedin.com/in/lp-profile/"
                 target="_blank"
                 rel="noopener noreferrer"
-                ><box-icon type="logo" name="linkedin-square"></box-icon
+                ><i class="bx bxl-linkedin-square"></i
               ></a>
             </li>
           </ul>
@@ -983,7 +978,7 @@
       <div class="footer--area-item">
         <div class="footer--area-item_footer">
           <h2>
-            <box-icon name="link"></box-icon>
+            <i class="bx bx-copyright"></i>
             <a
               href="https://lp-user1.github.io/portfolio"
               target="_blank"
@@ -991,14 +986,13 @@
               >Author ( LP )</a
             >
           </h2>
-          <p>Created this Web-page with lots of Love ::):</p>
+          <p>
+            Created this Web-page with lots of Love
+            <i class="bx bxs-heart bx-burst"></i>
+          </p>
         </div>
       </div>
     </footer>
     <!-- ========== End footer ========== -->
-
-    <!-- ========== Start box icon cdn link ========== -->
-    <script src="https://unpkg.com/boxicons@2.1.4/dist/boxicons.js"></script>
-    <!-- ========== End box icon cdn link ========== -->
   </body>
 </html>

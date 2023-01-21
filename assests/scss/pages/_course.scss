@@ -70,6 +70,7 @@
 
       @include mixin.responsive(lg) {
         font-size: .98rem;
+        margin-bottom: 1rem;
       }
     }
   }
@@ -92,7 +93,13 @@
 
     @include mixin.responsive(lg) {
       flex-direction: row;
+      gap: 6rem;
     }
+
+    @include mixin.responsive(xxl) {
+      gap: 8rem;
+    }
+
 
     &-card {
       width: 16rem;
@@ -123,10 +130,10 @@
         width: 100%;
         height: 100%;
         object-fit: cover;
-        transition: all 1s cubic-bezier(0.25, 0.46, 0.45, 0.94);
+        transition: all 400ms cubic-bezier(0.25, 0.46, 0.45, 0.94);
 
         &:hover {
-          transform-origin: top;
+          transform-origin: center;
           transform: scale(1.2);
         }
       }

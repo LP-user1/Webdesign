@@ -42,6 +42,14 @@
       padding: .8rem 3rem;
     }
 
+    @include mixin.responsive(xl) {
+      padding: .8rem 4rem;
+    }
+
+    @include mixin.responsive(xxl) {
+      padding: .8rem 6rem;
+    }
+
     & > a h2 {
       font-family: var.$font-shadow-light;
 
@@ -62,17 +70,17 @@
       color: fun.theme-color("default-dark-hover");
     }
 
-    .nav-toggler > box-icon {
+    .nav-toggler > i {
       display: none;
 
       @include mixin.responsive(xs) {
         display: block;
-        font-size: 1rem;
+        font-size: 1.5rem;
       }
 
       @include mixin.responsive(sm) {
         display: block;
-        font-size: 1rem;
+        font-size: 2rem;
       }
 
       @include mixin.responsive(lg) {

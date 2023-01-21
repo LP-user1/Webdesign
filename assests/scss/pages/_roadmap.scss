@@ -84,12 +84,27 @@
       flex-direction: column;
     }
 
-    &-Rightarrow > svg {
-      width: 2rem;
-      height: 2rem;
+    @include mixin.responsive(sm) {
+      flex-direction: column;
+    }
+
+    @include mixin.responsive(md) {
+      flex-direction: row;
+    }
+
+    &-Rightarrow > i {
+      font-size: 4rem;
 
       @include mixin.responsive(xs) {
-        transform: rotate(94deg);
+        transform: rotate(90deg);
+      }
+
+      @include mixin.responsive(sm) {
+        transform: rotate(90deg);
+      }
+
+      @include mixin.responsive(md) {
+        transform: rotate(0deg);
       }
     }
   }
@@ -113,6 +128,12 @@
       width: 100%;
       padding: .7rem;
     }
+
+    @include mixin.responsive(xxl) {
+      width: 15rem;
+      padding: .6rem;
+    }
+
 
     &:hover {
       border-radius: .6rem;
@@ -201,11 +222,11 @@
       }
 
       @include mixin.responsive(md) {
-        font-size: .9rem;
+        font-size: .8rem;
       }
 
-      @include mixin.responsive(lg) {
-        font-size: .98rem;
+      @include mixin.responsive(xxl) {
+        font-size: 1rem;
       }
     }
   }
