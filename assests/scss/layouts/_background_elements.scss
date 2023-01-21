@@ -105,6 +105,11 @@
       bottom: 14%;
       left: 6%;
     }
+
+    @include mixin.responsive(lg) {
+      bottom: 14%;
+      left: 16%;
+    }
   }
 
   .circle3 {
@@ -170,6 +175,10 @@
 
     @include mixin.responsive(sm) {
       top: 40%;
+    }
+
+    @include mixin.responsive(lg) {
+      top: 70%;
     }
   }
 

@@ -26,6 +26,10 @@
     padding: 2rem 5rem;
   }
 
+  @include mixin.responsive(lg) {
+    padding: 2rem 7.5rem;
+  }
+
   & h2 {
     font-weight: 400;
     font-size: 1.3rem;

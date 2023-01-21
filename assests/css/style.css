@@ -150,6 +150,11 @@ body {
     font-size: 1rem;
   }
 }
+@media only screen and (min-width: 992px) {
+  .header > div .nav-toggler > box-icon {
+    display: none;
+  }
+}
 .header--menu {
   display: flex;
   justify-content: space-between;
@@ -164,6 +169,11 @@ body {
 @media only screen and (min-width: 576px) {
   .header--menu {
     display: none;
+  }
+}
+@media only screen and (min-width: 992px) {
+  .header--menu {
+    display: flex;
   }
 }
 .header--menu--item {
@@ -283,6 +293,12 @@ body {
     left: 6%;
   }
 }
+@media only screen and (min-width: 992px) {
+  .background-shapes .circle2 {
+    bottom: 14%;
+    left: 16%;
+  }
+}
 .background-shapes .circle3 {
   position: absolute;
   bottom: 14%;
@@ -347,6 +363,11 @@ body {
 @media only screen and (min-width: 576px) {
   .background-shapes .dot2 {
     top: 40%;
+  }
+}
+@media only screen and (min-width: 992px) {
+  .background-shapes .dot2 {
+    top: 70%;
   }
 }
 .background-shapes .dot3 {
@@ -769,6 +790,15 @@ body {
     gap: 3.5rem;
   }
 }
+@media only screen and (min-width: 992px) {
+  .hero-area {
+    height: 100vh;
+    padding: 3rem 4rem;
+    padding-top: 15rem;
+    flex-direction: row;
+    gap: 3.5rem;
+  }
+}
 .hero-area--container {
   width: 100%;
   height: 100%;
@@ -797,6 +827,11 @@ body {
     font-size: 1.5rem;
   }
 }
+@media only screen and (min-width: 992px) {
+  .hero-area--container > h2 {
+    font-size: 1.7rem;
+  }
+}
 .hero-area--container--desc {
   font-family: "Inter", sans-serif;
   line-height: 1.5;
@@ -818,6 +853,12 @@ body {
   .hero-area--container--desc {
     font-size: 1rem;
     line-height: 1.6;
+  }
+}
+@media only screen and (min-width: 992px) {
+  .hero-area--container--desc {
+    font-size: 1.2rem;
+    line-height: 1.7;
   }
 }
 .hero-area--illustration {
@@ -862,6 +903,12 @@ body {
     padding-bottom: 5rem;
   }
 }
+@media only screen and (min-width: 992px) {
+  .about-area {
+    padding: 4rem;
+    padding-bottom: 6rem;
+  }
+}
 .about-area--illustration > svg {
   width: 30rem;
 }
@@ -878,6 +925,11 @@ body {
 @media only screen and (min-width: 768px) {
   .about-area--illustration > svg {
     width: 19rem;
+  }
+}
+@media only screen and (min-width: 992px) {
+  .about-area--illustration > svg {
+    width: 22rem;
   }
 }
 .about-area--container h2 {
@@ -900,6 +952,11 @@ body {
 @media only screen and (min-width: 768px) {
   .about-area--container h2 {
     font-size: 1.5rem;
+  }
+}
+@media only screen and (min-width: 992px) {
+  .about-area--container h2 {
+    font-size: 1.7rem;
   }
 }
 .about-area--container p {
@@ -949,6 +1006,11 @@ body {
     padding: 4rem 3rem;
   }
 }
+@media only screen and (min-width: 992px) {
+  .roadmap {
+    padding: 4rem;
+  }
+}
 .roadmap--heading {
   text-align: center;
 }
@@ -968,6 +1030,11 @@ body {
 @media only screen and (min-width: 768px) {
   .roadmap--heading > h2 {
     font-size: 1.4rem;
+  }
+}
+@media only screen and (min-width: 992px) {
+  .roadmap--heading > h2 {
+    font-size: 1.5rem;
   }
 }
 .roadmap--heading > p {
@@ -1132,6 +1199,11 @@ body {
     font-size: 0.9rem;
   }
 }
+@media only screen and (min-width: 992px) {
+  .roadmap--item p {
+    font-size: 0.98rem;
+  }
+}
 
 .course {
   width: 100%;
@@ -1162,6 +1234,12 @@ body {
     padding: 7rem 3rem;
   }
 }
+@media only screen and (min-width: 992px) {
+  .course {
+    clip-path: polygon(0 10%, 100% 0%, 100% 90%, 0% 100%);
+    padding: 10rem 0;
+  }
+}
 .course--heading {
   text-align: center;
 }
@@ -1183,6 +1261,11 @@ body {
     font-size: 1.3rem;
   }
 }
+@media only screen and (min-width: 992px) {
+  .course--heading h2 {
+    font-size: 1.5rem;
+  }
+}
 @media only screen and (max-width: 575.99px) {
   .course--heading p {
     font-size: 0.9rem;
@@ -1196,6 +1279,11 @@ body {
 @media only screen and (min-width: 768px) {
   .course--heading p {
     font-size: 0.9rem;
+  }
+}
+@media only screen and (min-width: 992px) {
+  .course--heading p {
+    font-size: 0.98rem;
   }
 }
 .course--item {
@@ -1216,6 +1304,11 @@ body {
     flex-direction: column;
   }
 }
+@media only screen and (min-width: 992px) {
+  .course--item {
+    flex-direction: row;
+  }
+}
 .course--item-card {
   width: 16rem;
   border-radius: 1.5rem;
@@ -1229,6 +1322,11 @@ body {
 @media only screen and (min-width: 768px) {
   .course--item-card {
     width: 15rem;
+  }
+}
+@media only screen and (min-width: 992px) {
+  .course--item-card {
+    width: 16rem;
   }
 }
 .course--item-card_img {
@@ -1303,6 +1401,11 @@ body {
 @media only screen and (min-width: 768px) {
   .contact--area {
     padding: 4rem 3rem;
+  }
+}
+@media only screen and (min-width: 992px) {
+  .contact--area {
+    padding: 4rem;
   }
 }
 .contact--area-heading > h2 {
@@ -1430,6 +1533,11 @@ body {
 @media only screen and (min-width: 768px) {
   .footer--area {
     padding: 2rem 5rem;
+  }
+}
+@media only screen and (min-width: 992px) {
+  .footer--area {
+    padding: 2rem 7.5rem;
   }
 }
 .footer--area h2 {

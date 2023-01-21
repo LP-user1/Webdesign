@@ -74,6 +74,10 @@
         display: block;
         font-size: 1rem;
       }
+
+      @include mixin.responsive(lg) {
+        display: none;
+      }
     }
   }
 
@@ -89,6 +93,10 @@
 
     @include mixin.responsive(sm) {
       display: none;
+    }
+
+    @include mixin.responsive(lg) {
+      display: flex;
     }
 
     &--item {

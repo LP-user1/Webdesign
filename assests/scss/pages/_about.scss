@@ -30,6 +30,11 @@
     padding-bottom: 5rem;
   }
 
+  @include mixin.responsive(lg) {
+    padding: 4rem;
+    padding-bottom: 6rem;
+  }
+
   &--illustration > svg {
     width: 30rem;
 
@@ -43,6 +48,10 @@
 
     @include mixin.responsive(md) {
       width: 19rem;
+    }
+
+    @include mixin.responsive(lg) {
+      width: 22rem;
     }
   }
 
@@ -64,6 +73,10 @@
 
       @include mixin.responsive(md) {
         font-size: 1.5rem;
+      }
+
+      @include mixin.responsive(lg) {
+        font-size: 1.7rem;
       }
     }
 
