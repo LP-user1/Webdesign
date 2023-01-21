@@ -17,6 +17,10 @@
     padding: 3rem 2rem;
   }
 
+  @include mixin.responsive(md) {
+    padding: 4rem 3rem;
+  }
+
   &--heading {
     text-align: center;
 
@@ -30,6 +34,10 @@
       @include mixin.responsive(sm) {
         font-size: 1.2rem;
       }
+
+      @include mixin.responsive(md) {
+        font-size: 1.4rem;
+      }
     }
 
     & > p {
@@ -41,6 +49,10 @@
 
       @include mixin.responsive(sm) {
         font-size: .8rem;
+      }
+
+      @include mixin.responsive(md) {
+        font-size: 1rem;
       }
     }
 
@@ -123,6 +135,11 @@
         height: 5rem;
       }
 
+      @include mixin.responsive(md) {
+        width: 7rem;
+        height: 7rem;
+      }
+
       img {
         width: 5rem;
         height: 5rem;
@@ -137,6 +154,11 @@
           width: 3rem;
           height: 3rem;
         }
+
+        @include mixin.responsive(md) {
+          width: 4rem;
+          height: 4rem;
+        }
       }
     }
 
@@ -149,6 +171,10 @@
 
       @include mixin.responsive(sm) {
         font-size: .9rem;
+      }
+
+      @include mixin.responsive(md) {
+        font-size: 1rem;
       }
     }
 
@@ -164,6 +190,10 @@
       @include mixin.responsive(sm) {
         font-size: .8rem;
         line-height: 1.2;
+      }
+
+      @include mixin.responsive(md) {
+        font-size: .9rem;
       }
     }
   }

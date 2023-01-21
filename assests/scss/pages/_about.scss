@@ -24,6 +24,12 @@
     clip-path: polygon(100% 0, 0 0, 0 100%, 19% 89%, 100% 100%);
   }
 
+  @include mixin.responsive(md) {
+    padding: 4rem 3rem;
+    gap: 2rem;
+    padding-bottom: 5rem;
+  }
+
   &--illustration > svg {
     width: 30rem;
 
@@ -33,6 +39,10 @@
 
     @include mixin.responsive(sm) {
       width: 17rem;
+    }
+
+    @include mixin.responsive(md) {
+      width: 19rem;
     }
   }
 
@@ -51,6 +61,10 @@
         font-size: 1.3rem;
         margin-bottom: .5rem;
       }
+
+      @include mixin.responsive(md) {
+        font-size: 1.5rem;
+      }
     }
 
     & p {
@@ -64,9 +78,13 @@
       }
 
       @include mixin.responsive(sm) {
-        line-height: 1.5;
         font-size: .9rem;
         line-height: 1.4;
+      }
+
+      @include mixin.responsive(md) {
+        line-height: 1.5;
+        font-size: 1rem;
       }
     }
   }

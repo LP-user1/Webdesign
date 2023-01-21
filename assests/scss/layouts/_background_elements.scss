@@ -43,6 +43,12 @@
       left: 64%;
 
     }
+
+    @include mixin.responsive(md) {
+      top: 16%;
+      left: 64%;
+
+    }
   }
 
   .box3 {
@@ -94,6 +100,11 @@
     transition: animation .2s cubic-bezier(0.215, 0.610, 0.355, 1);
     animation: rotate 9s linear infinite;
     z-index: -1;
+
+    @include mixin.responsive(md) {
+      bottom: 14%;
+      left: 6%;
+    }
   }
 
   .circle3 {
@@ -141,6 +152,11 @@
     height: .3rem;
     background-color: fun.theme-color();
     z-index: -1;
+
+    @include mixin.responsive(md) {
+      bottom: 80%;
+      left: 90%;
+    }
   }
 
   .dot2 {

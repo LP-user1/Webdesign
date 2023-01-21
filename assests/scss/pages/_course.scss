@@ -23,6 +23,10 @@
     padding: 7rem 2rem;
   }
 
+  @include mixin.responsive(md) {
+    padding: 7rem 3rem;
+  }
+
   &--heading {
     text-align: center;
 
@@ -36,6 +40,10 @@
       @include mixin.responsive(sm) {
         font-size: 1.1rem;
       }
+
+      @include mixin.responsive(md) {
+        font-size: 1.3rem;
+      }
     }
 
     p {
@@ -45,6 +53,10 @@
 
       @include mixin.responsive(sm) {
         font-size: .8rem;
+      }
+
+      @include mixin.responsive(md) {
+        font-size: .9rem;
       }
     }
   }
@@ -72,6 +84,10 @@
 
       @include mixin.responsive(sm) {
         width: 14rem;
+      }
+
+      @include mixin.responsive(md) {
+        width: 15rem;
       }
 
 
@@ -110,11 +126,20 @@
             font-size: .8rem;
             margin-bottom: .4rem;
           }
+
+          @include mixin.responsive(md) {
+            font-size: .9rem;
+            margin-bottom: .4rem;
+          }
         }
 
         p {
           @include mixin.responsive(sm) {
             font-size: .8rem;
+          }
+
+          @include mixin.responsive(md) {
+            font-size: .89rem;
           }
         }
       }

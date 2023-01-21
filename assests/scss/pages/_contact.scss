@@ -18,6 +18,10 @@
     padding: 4rem 2rem;
   }
 
+  @include mixin.responsive(md) {
+    padding: 4rem 3rem;
+  }
+
   &-heading > h2 {
     font-weight: 400;
 
@@ -27,6 +31,10 @@
 
     @include mixin.responsive(sm) {
       font-size: 1.2rem;
+    }
+
+    @include mixin.responsive(md) {
+      font-size: 1.4rem;
     }
   }
 
@@ -39,6 +47,10 @@
 
     @include mixin.responsive(sm) {
       font-size: .7rem;
+    }
+
+    @include mixin.responsive(md) {
+      font-size: .85rem;
     }
   }
 
