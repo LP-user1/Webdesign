@@ -20,28 +20,29 @@
   </head>
   <body>
     <!-- ========== Start header ========== -->
-    <header class="header">
+    <header class="header nav-fixed">
       <div>
-        <a href="">
+        <a href="/">
           <h2>Web-Design ( LP )</h2>
         </a>
         <div class="nav-toggler">
-          <i class="bx bx-menu"></i>
+          <i class="nav-icon bx bx-menu"></i>
+          <i class="nav-icon bx bx-x hide"></i>
         </div>
         <ul class="header--menu">
-          <li class="header--menu--item">
-            <a href="/" class="active">Home</a>
+          <li class="header--menu--item menu-link">
+            <a href="#home" class="active">Home</a>
           </li>
-          <li class="header--menu--item">
-            <a href="#course">About</a>
+          <li class="header--menu--item menu-link">
+            <a href="#about">About</a>
           </li>
-          <li class="header--menu--item">
+          <li class="header--menu--item menu-link">
             <a href="#roadmap">Roadmap</a>
           </li>
-          <li class="header--menu--item">
+          <li class="header--menu--item menu-link">
             <a href="#course">Courses</a>
           </li>
-          <li class="header--menu--item">
+          <li class="header--menu--item menu-link">
             <a href="#contact" class="btn-primary">Contact Us</a>
           </li>
         </ul>
@@ -52,7 +53,7 @@
     <!-- ========== Start main ========== -->
     <main>
       <!-- ========== Start hero area ========== -->
-      <section class="hero-area">
+      <section id="home" class="hero-area">
         <div class="background-shapes">
           <div class="box1"></div>
           <div class="box2"></div>
@@ -301,7 +302,7 @@
       <!-- ========== End hero area ========== -->
 
       <!-- ========== Start about ========== -->
-      <section class="about-area">
+      <section id="about" class="about-area">
         <div class="about-area--illustration">
           <svg
             xmlns="http://www.w3.org/2000/svg"
@@ -603,7 +604,7 @@
       <!-- ========== End about ========== -->
 
       <!-- ========== Start roadmap ========== -->
-      <section class="roadmap">
+      <section id="roadmap" class="roadmap">
         <div class="roadmap--heading">
           <h2>Roadmap to Learn</h2>
           <p>Easy to learn, then earn!</p>
@@ -651,7 +652,7 @@
       <!-- ========== End roadmap ========== -->
 
       <!-- ========== Start course ========== -->
-      <section class="course">
+      <section id="course" class="course">
         <div class="course--heading">
           <h2>Free Courses to enroll</h2>
           <p>Get the course to learn quickly!!</p>
@@ -707,7 +708,7 @@
       <!-- ========== End course ========== -->
 
       <!-- ========== Start contact area ========== -->
-      <section class="contact--area">
+      <section id="contact" class="contact--area">
         <div class="contact--area-heading mb-2">
           <h2>Contact Us</h2>
           <p>Send message as breifly as possible</p>
@@ -994,5 +995,8 @@
       </div>
     </footer>
     <!-- ========== End footer ========== -->
+
+    <!-- External Script -->
+    <script src="./assests/js/script.js"></script>
   </body>
 </html>

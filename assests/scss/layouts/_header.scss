@@ -4,18 +4,15 @@
 
 .header {
   width: 100%;
-  background-color: fun.theme-color("default-white");
   z-index: 10;
 
   @include mixin.responsive(xs) {
-    position: fixed;
     border-bottom-left-radius: 2rem;
     border-bottom-right-radius: 2rem;
     box-shadow: 0 .6px 10px .6px fun.theme-color("default-dark");
   }
 
   @include mixin.responsive(sm) {
-    position: fixed;
     border-radius: 0;
     box-shadow: 0 .6px 10px .6px fun.theme-color("default-dark");
   }
@@ -76,11 +73,19 @@
       @include mixin.responsive(xs) {
         display: block;
         font-size: 1.5rem;
+
+        &.hide {
+          display: none;
+        }
       }
 
       @include mixin.responsive(sm) {
         display: block;
         font-size: 2rem;
+
+        &.hide {
+          display: none;
+        }
       }
 
       @include mixin.responsive(lg) {
@@ -97,15 +102,90 @@
 
     @include mixin.responsive(xs) {
       display: none;
+      position: fixed;
+      top: -100%;
+      right: 10%;
+      width: 80%;
+      height: 100%;
+      background-color: fun.theme-color("default-white");
+      transition: all 500ms cubic-bezier(0.215, 0.610, 0.355, 1);
+      z-index: 9;
+      border-top-left-radius: .5rem;
+      border-top-right-radius: .5rem;
+
+      &.show {
+        display: block;
+        top: 9%;
+      }
+
+      & li:first-child {
+        margin-top: 2rem;
+      }
+
+      & li {
+        text-align: center;
+        margin-bottom: 1rem;
+
+      }
+
+
     }
 
     @include mixin.responsive(sm) {
       display: none;
+      position: fixed;
+      top: 9.4%;
+      right: -100%;
+      width: 70%;
+      height: 100%;
+      background-color: fun.theme-color("default-white");
+      transition: all 500ms cubic-bezier(0.215, 0.610, 0.355, 1);
+      z-index: 9;
+
+      &.show {
+        display: block;
+        right: 0;
+      }
+
+      & li:first-child {
+        margin-top: 2rem;
+      }
+
+      & li {
+        text-align: center;
+        margin-bottom: 1rem;
+      }
     }
 
     @include mixin.responsive(lg) {
       display: flex;
+      position: initial;
+      width: 60%;
+      top: 0;
+      right: 0;
+
+      &.show {
+        display: flex;
+      }
+
+      & li:first-child {
+        margin-top: 0;
+      }
+
+      & li {
+        text-align: initial;
+        margin-bottom: 0;
+      }
     }
+
+    @include mixin.responsive(xl) {
+      width: 50%;
+    }
+
+    @include mixin.responsive(xxl) {
+      width: 50%;
+    }
+
 
     &--item {
       list-style: none;
@@ -116,12 +196,24 @@
         letter-spacing: .1rem;
         transition: all .2s cubic-bezier(0.455, 0.03, 0.515, 0.955);
 
+        &.active {
+          color: fun.theme-color();
+        }
       }
 
       & > a:hover {
         color: fun.theme-color();
       }
     }
+  }
+
+  &.nav-fixed {
+    width: 100%;
+    position: fixed;
+    top: -1px;
+    left: 0;
+    right: 0;
+    background-color: fun.theme-color("default-white");
   }
 
 }
