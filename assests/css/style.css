@@ -73,9 +73,20 @@ body {
   background-color: #fff;
   z-index: 10;
 }
-@media only screen and (max-width: 576px) {
+@media only screen and (max-width: 575.99px) {
   .header {
     position: fixed;
+    border-bottom-left-radius: 2rem;
+    border-bottom-right-radius: 2rem;
+    box-shadow: 0 0.6px 10px 0.6px rgba(0, 0, 0, 0.905);
+  }
+}
+@media only screen and (min-width: 576px) {
+  .header {
+    position: fixed;
+    border-bottom-left-radius: 2rem;
+    border-bottom-right-radius: 2rem;
+    box-shadow: 0 0.6px 10px 0.6px rgba(0, 0, 0, 0.905);
   }
 }
 .header > div {
@@ -84,15 +95,25 @@ body {
   justify-content: space-between;
   padding: 1rem 9rem;
 }
-@media only screen and (max-width: 576px) {
+@media only screen and (max-width: 575.99px) {
   .header > div {
-    padding: 1rem 2rem;
+    padding: 0.7rem 2rem;
+  }
+}
+@media only screen and (min-width: 576px) {
+  .header > div {
+    padding: 0.8rem 2rem;
   }
 }
 .header > div > a h2 {
   font-family: "Shadows Into Light", cursive;
 }
-@media only screen and (max-width: 576px) {
+@media only screen and (max-width: 575.99px) {
+  .header > div > a h2 {
+    font-size: 1rem;
+  }
+}
+@media only screen and (min-width: 576px) {
   .header > div > a h2 {
     font-size: 1.2rem;
   }
@@ -103,7 +124,13 @@ body {
 .header > div .nav-toggler > box-icon {
   display: none;
 }
-@media only screen and (max-width: 576px) {
+@media only screen and (max-width: 575.99px) {
+  .header > div .nav-toggler > box-icon {
+    display: block;
+    font-size: 1rem;
+  }
+}
+@media only screen and (min-width: 576px) {
   .header > div .nav-toggler > box-icon {
     display: block;
     font-size: 1rem;
@@ -115,7 +142,12 @@ body {
   align-items: center;
   gap: 1.5rem;
 }
-@media only screen and (max-width: 576px) {
+@media only screen and (max-width: 575.99px) {
+  .header--menu {
+    display: none;
+  }
+}
+@media only screen and (min-width: 576px) {
   .header--menu {
     display: none;
   }
@@ -146,6 +178,11 @@ body {
   animation: rotate 9s linear infinite;
   z-index: -1;
 }
+@media only screen and (min-width: 576px) {
+  .background-shapes .box1 {
+    top: 20%;
+  }
+}
 .background-shapes .box2 {
   position: absolute;
   bottom: 30%;
@@ -159,9 +196,15 @@ body {
   animation: rotate 9s linear infinite;
   z-index: -1;
 }
-@media only screen and (max-width: 576px) {
+@media only screen and (max-width: 575.99px) {
   .background-shapes .box2 {
     display: none;
+  }
+}
+@media only screen and (min-width: 576px) {
+  .background-shapes .box2 {
+    top: 27%;
+    left: 64%;
   }
 }
 .background-shapes .box3 {
@@ -177,6 +220,12 @@ body {
   animation: rotate 9s linear infinite;
   z-index: -1;
 }
+@media only screen and (min-width: 576px) {
+  .background-shapes .box3 {
+    bottom: 30%;
+    right: 7%;
+  }
+}
 .background-shapes .circle1 {
   position: absolute;
   top: 54%;
@@ -189,6 +238,11 @@ body {
   transition: animation 0.2s cubic-bezier(0.215, 0.61, 0.355, 1);
   animation: rotate 9s linear infinite;
   z-index: -1;
+}
+@media only screen and (min-width: 576px) {
+  .background-shapes .circle1 {
+    top: 43%;
+  }
 }
 .background-shapes .circle2 {
   position: absolute;
@@ -216,6 +270,11 @@ body {
   animation: rotate 9s linear infinite;
   z-index: -1;
 }
+@media only screen and (min-width: 576px) {
+  .background-shapes .circle3 {
+    right: 28%;
+  }
+}
 .background-shapes .circle4 {
   position: absolute;
   top: 16%;
@@ -228,6 +287,12 @@ body {
   transition: animation 0.2s cubic-bezier(0.215, 0.61, 0.355, 1);
   animation: rotate 9s linear infinite;
   z-index: -1;
+}
+@media only screen and (min-width: 576px) {
+  .background-shapes .circle4 {
+    top: 40%;
+    right: 10%;
+  }
 }
 .background-shapes .dot1 {
   position: absolute;
@@ -247,6 +312,11 @@ body {
   background-color: #1e90ff;
   z-index: -1;
 }
+@media only screen and (min-width: 576px) {
+  .background-shapes .dot2 {
+    top: 40%;
+  }
+}
 .background-shapes .dot3 {
   position: absolute;
   top: 15%;
@@ -255,6 +325,12 @@ body {
   height: 0.3rem;
   background-color: #1e90ff;
   z-index: -1;
+}
+@media only screen and (min-width: 576px) {
+  .background-shapes .dot3 {
+    top: 20%;
+    left: 20%;
+  }
 }
 
 .m-1 {
@@ -634,10 +710,22 @@ body {
   align-items: center;
   padding: 8rem 10rem;
 }
-@media only screen and (max-width: 576px) {
+@media only screen and (max-width: 575.99px) {
   .hero-area {
+    height: 100%;
     padding: 2rem;
+    gap: 1rem;
+    padding-bottom: 5rem;
     flex-direction: column-reverse;
+  }
+}
+@media only screen and (min-width: 576px) {
+  .hero-area {
+    height: 100%;
+    padding: 2rem;
+    padding-top: 4rem;
+    flex-direction: column;
+    gap: 3.5rem;
   }
 }
 .hero-area--container {
@@ -653,9 +741,14 @@ body {
   font-weight: 500;
   color: rgba(0, 0, 0, 0.905);
 }
-@media only screen and (max-width: 576px) {
+@media only screen and (max-width: 575.99px) {
   .hero-area--container > h2 {
-    font-size: 1.4rem;
+    font-size: 1.2rem;
+  }
+}
+@media only screen and (min-width: 576px) {
+  .hero-area--container > h2 {
+    font-size: 1.2rem;
   }
 }
 .hero-area--container--desc {
@@ -663,17 +756,23 @@ body {
   line-height: 1.5;
   color: rgba(128, 128, 128, 0.875);
 }
-@media only screen and (max-width: 576px) {
+@media only screen and (max-width: 575.99px) {
   .hero-area--container--desc {
-    font-size: 0.9rem;
+    font-size: 0.8rem;
     line-height: 1.3;
+  }
+}
+@media only screen and (min-width: 576px) {
+  .hero-area--container--desc {
+    font-size: 0.8rem;
+    line-height: 1.5;
   }
 }
 .hero-area--illustration {
   width: 100%;
   height: 100%;
 }
-@media only screen and (max-width: 576px) {
+@media only screen and (max-width: 575.99px) {
   .hero-area--illustration {
     margin-top: 6rem;
   }
@@ -689,7 +788,7 @@ body {
   gap: 1rem;
   clip-path: polygon(100% 100%, 100% 0, 0 0, 0 100%, 28% 81%);
 }
-@media only screen and (max-width: 576px) {
+@media only screen and (max-width: 575.99px) {
   .about-area {
     flex-direction: column;
     padding: 1rem 2rem;
@@ -697,12 +796,24 @@ body {
     clip-path: polygon(100% 0, 0 0, 0 100%, 19% 89%, 100% 100%);
   }
 }
+@media only screen and (min-width: 576px) {
+  .about-area {
+    padding: 1rem 2rem;
+    padding-bottom: 6rem;
+    clip-path: polygon(100% 0, 0 0, 0 100%, 19% 89%, 100% 100%);
+  }
+}
 .about-area--illustration > svg {
   width: 30rem;
 }
-@media only screen and (max-width: 576px) {
+@media only screen and (max-width: 575.99px) {
   .about-area--illustration > svg {
     width: 100%;
+  }
+}
+@media only screen and (min-width: 576px) {
+  .about-area--illustration > svg {
+    width: 17rem;
   }
 }
 .about-area--container h2 {
@@ -710,9 +821,15 @@ body {
   font-weight: 500;
   font-size: 3rem;
 }
-@media only screen and (max-width: 576px) {
+@media only screen and (max-width: 575.99px) {
   .about-area--container h2 {
     font-size: 1.5rem;
+    margin-bottom: 0.5rem;
+  }
+}
+@media only screen and (min-width: 576px) {
+  .about-area--container h2 {
+    font-size: 1.3rem;
     margin-bottom: 0.5rem;
   }
 }
@@ -721,10 +838,17 @@ body {
   font-size: 15px;
   line-height: 2;
 }
-@media only screen and (max-width: 576px) {
+@media only screen and (max-width: 575.99px) {
   .about-area--container p {
     line-height: 1.5;
     font-size: 0.9rem;
+  }
+}
+@media only screen and (min-width: 576px) {
+  .about-area--container p {
+    line-height: 1.5;
+    font-size: 0.9rem;
+    line-height: 1.4;
   }
 }
 
@@ -736,7 +860,12 @@ body {
   padding: 4rem 12rem;
   gap: 2rem;
 }
-@media only screen and (max-width: 576px) {
+@media only screen and (max-width: 575.99px) {
+  .roadmap {
+    padding: 3rem 2rem;
+  }
+}
+@media only screen and (min-width: 576px) {
   .roadmap {
     padding: 3rem 2rem;
   }
@@ -747,8 +876,28 @@ body {
 .roadmap--heading > h2 {
   font-weight: 500;
 }
+@media only screen and (max-width: 575.99px) {
+  .roadmap--heading > h2 {
+    font-size: 1.2rem;
+  }
+}
+@media only screen and (min-width: 576px) {
+  .roadmap--heading > h2 {
+    font-size: 1.2rem;
+  }
+}
 .roadmap--heading > p {
   font-size: 15px;
+}
+@media only screen and (max-width: 575.99px) {
+  .roadmap--heading > p {
+    font-size: 0.7rem;
+  }
+}
+@media only screen and (min-width: 576px) {
+  .roadmap--heading > p {
+    font-size: 0.8rem;
+  }
 }
 .roadmap--heading-line {
   margin: 0 auto;
@@ -764,7 +913,7 @@ body {
   align-items: center;
   gap: 2rem;
 }
-@media only screen and (max-width: 576px) {
+@media only screen and (max-width: 575.99px) {
   .roadmap--items {
     flex-direction: column;
   }
@@ -773,7 +922,7 @@ body {
   width: 2rem;
   height: 2rem;
 }
-@media only screen and (max-width: 576px) {
+@media only screen and (max-width: 575.99px) {
   .roadmap--items-Rightarrow > svg {
     transform: rotate(94deg);
   }
@@ -788,9 +937,15 @@ body {
   z-index: 1;
   transition: all 500ms cubic-bezier(0.25, 0.46, 0.45, 0.94);
 }
-@media only screen and (max-width: 576px) {
+@media only screen and (max-width: 575.99px) {
   .roadmap--item {
     width: 100%;
+  }
+}
+@media only screen and (min-width: 576px) {
+  .roadmap--item {
+    width: 100%;
+    padding: 0.7rem;
   }
 }
 .roadmap--item:hover {
@@ -808,10 +963,16 @@ body {
   align-items: center;
   padding: 2rem;
 }
-@media only screen and (max-width: 576px) {
+@media only screen and (max-width: 575.99px) {
   .roadmap--item_img {
     width: 6rem;
     height: 6rem;
+  }
+}
+@media only screen and (min-width: 576px) {
+  .roadmap--item_img {
+    width: 5rem;
+    height: 5rem;
   }
 }
 .roadmap--item_img img {
@@ -819,7 +980,13 @@ body {
   height: 5rem;
   object-fit: cover;
 }
-@media only screen and (max-width: 576px) {
+@media only screen and (max-width: 575.99px) {
+  .roadmap--item_img img {
+    width: 3rem;
+    height: 3rem;
+  }
+}
+@media only screen and (min-width: 576px) {
   .roadmap--item_img img {
     width: 3rem;
     height: 3rem;
@@ -828,9 +995,31 @@ body {
 .roadmap--item h4 {
   font-weight: 500;
 }
+@media only screen and (max-width: 575.99px) {
+  .roadmap--item h4 {
+    font-size: 0.95rem;
+  }
+}
+@media only screen and (min-width: 576px) {
+  .roadmap--item h4 {
+    font-size: 0.9rem;
+  }
+}
 .roadmap--item p {
   font-size: 14px;
   line-height: 1.5;
+}
+@media only screen and (max-width: 575.99px) {
+  .roadmap--item p {
+    font-size: 0.8rem;
+    line-height: 1.2;
+  }
+}
+@media only screen and (min-width: 576px) {
+  .roadmap--item p {
+    font-size: 0.8rem;
+    line-height: 1.2;
+  }
 }
 
 .course {
@@ -845,10 +1034,16 @@ body {
   background-color: #1e90ff;
   clip-path: polygon(0 14%, 100% 0%, 100% 86%, 0% 100%);
 }
-@media only screen and (max-width: 576px) {
+@media only screen and (max-width: 575.99px) {
   .course {
     clip-path: polygon(100% 0, 0 4%, 0 100%, 100% 96%);
     padding: 10rem 2rem;
+  }
+}
+@media only screen and (min-width: 576px) {
+  .course {
+    clip-path: polygon(100% 0, 0 4%, 0 100%, 100% 96%);
+    padding: 7rem 2rem;
   }
 }
 .course--heading {
@@ -857,14 +1052,24 @@ body {
 .course--heading h2 {
   font-weight: 500;
 }
-@media only screen and (max-width: 576px) {
+@media only screen and (max-width: 575.99px) {
   .course--heading h2 {
     font-size: 1.2rem;
   }
 }
-@media only screen and (max-width: 576px) {
+@media only screen and (min-width: 576px) {
+  .course--heading h2 {
+    font-size: 1.1rem;
+  }
+}
+@media only screen and (max-width: 575.99px) {
   .course--heading p {
     font-size: 0.9rem;
+  }
+}
+@media only screen and (min-width: 576px) {
+  .course--heading p {
+    font-size: 0.8rem;
   }
 }
 .course--item {
@@ -875,7 +1080,12 @@ body {
   align-items: center;
   gap: 3rem;
 }
-@media only screen and (max-width: 576px) {
+@media only screen and (max-width: 575.99px) {
+  .course--item {
+    flex-direction: column;
+  }
+}
+@media only screen and (min-width: 576px) {
   .course--item {
     flex-direction: column;
   }
@@ -884,6 +1094,11 @@ body {
   width: 16rem;
   border-radius: 1.5rem;
   background-color: rgba(0, 0, 0, 0.905);
+}
+@media only screen and (min-width: 576px) {
+  .course--item-card {
+    width: 14rem;
+  }
 }
 .course--item-card_img {
   width: 100%;
@@ -906,6 +1121,23 @@ body {
   font-size: 14px;
   color: #fff;
 }
+@media only screen and (max-width: 575.99px) {
+  .course--item-card_body h2 {
+    font-size: 0.8rem;
+    margin-bottom: 0.4rem;
+  }
+}
+@media only screen and (min-width: 576px) {
+  .course--item-card_body h2 {
+    font-size: 0.8rem;
+    margin-bottom: 0.4rem;
+  }
+}
+@media only screen and (min-width: 576px) {
+  .course--item-card_body p {
+    font-size: 0.8rem;
+  }
+}
 
 .contact--area {
   width: 100%;
@@ -916,16 +1148,41 @@ body {
   align-items: flex-start;
   padding: 6rem;
 }
-@media only screen and (max-width: 576px) {
+@media only screen and (max-width: 575.99px) {
   .contact--area {
     padding: 4rem 3rem;
+  }
+}
+@media only screen and (min-width: 576px) {
+  .contact--area {
+    padding: 4rem 2rem;
   }
 }
 .contact--area-heading > h2 {
   font-weight: 400;
 }
+@media only screen and (max-width: 575.99px) {
+  .contact--area-heading > h2 {
+    font-size: 1.2rem;
+  }
+}
+@media only screen and (min-width: 576px) {
+  .contact--area-heading > h2 {
+    font-size: 1.2rem;
+  }
+}
 .contact--area-heading > p {
   font-size: 14px;
+}
+@media only screen and (max-width: 575.99px) {
+  .contact--area-heading > p {
+    font-size: 0.7rem;
+  }
+}
+@media only screen and (min-width: 576px) {
+  .contact--area-heading > p {
+    font-size: 0.7rem;
+  }
 }
 .contact--area-items {
   width: 100%;
@@ -935,10 +1192,15 @@ body {
   align-items: center;
   gap: 3rem;
 }
-@media only screen and (max-width: 576px) {
+@media only screen and (max-width: 575.99px) {
   .contact--area-items {
     flex-direction: column-reverse;
     align-items: initial;
+  }
+}
+@media only screen and (min-width: 576px) {
+  .contact--area-items {
+    gap: 2rem;
   }
 }
 .contact--area-items_img {
@@ -996,16 +1258,28 @@ body {
   gap: 2rem;
   background-color: rgba(0, 0, 0, 0.905);
 }
-@media only screen and (max-width: 576px) {
+@media only screen and (max-width: 575.99px) {
   .footer--area {
     padding: 2rem;
+    gap: 1rem;
+  }
+}
+@media only screen and (min-width: 576px) {
+  .footer--area {
+    padding: 2rem;
+    align-items: initial;
   }
 }
 .footer--area h2 {
   font-weight: 400;
   font-size: 1.3rem;
 }
-@media only screen and (max-width: 576px) {
+@media only screen and (max-width: 575.99px) {
+  .footer--area h2 {
+    font-size: 0.8rem;
+  }
+}
+@media only screen and (min-width: 576px) {
   .footer--area h2 {
     font-size: 1rem;
   }
@@ -1016,7 +1290,7 @@ body {
   justify-content: space-between;
   align-items: flex-start;
 }
-@media only screen and (max-width: 576px) {
+@media only screen and (max-width: 575.99px) {
   .footer--area-item {
     flex-direction: column;
     gap: 2rem;
@@ -1031,13 +1305,28 @@ body {
   list-style: none;
   line-height: 2;
 }
+@media only screen and (max-width: 575.99px) {
+  .footer--area-item_links ul > li {
+    line-height: 1.7;
+  }
+}
+@media only screen and (min-width: 576px) {
+  .footer--area-item_links ul > li {
+    line-height: 1.7;
+  }
+}
 .footer--area-item_links ul > li a {
   font-size: 1rem;
   color: #fff;
   transition: all 500ms cubic-bezier(0.19, 1, 0.22, 1);
 }
-@media only screen and (max-width: 576px) {
-  .footer--area-item_links ul > li {
+@media only screen and (max-width: 575.99px) {
+  .footer--area-item_links ul > li a {
+    font-size: 0.7rem;
+  }
+}
+@media only screen and (min-width: 576px) {
+  .footer--area-item_links ul > li a {
     font-size: 0.9rem;
   }
 }
@@ -1048,6 +1337,11 @@ body {
   transition: all 500ms cubic-bezier(0.19, 1, 0.22, 1);
   background-color: #fff;
   border-radius: 50%;
+}
+@media only screen and (max-width: 575.99px) {
+  .footer--area-item_links ul > li > a > box-icon {
+    font-size: 0.7rem;
+  }
 }
 .footer--area-item_links ul > li > a > box-icon:hover {
   background-color: #1e90ff;
@@ -1069,14 +1363,24 @@ body {
 .footer--area-item_footer h2 {
   margin-bottom: 1.3rem;
 }
-@media only screen and (max-width: 576px) {
+@media only screen and (max-width: 575.99px) {
   .footer--area-item_footer h2 {
-    font-size: 1.2rem;
+    font-size: 1rem;
   }
 }
-@media only screen and (max-width: 576px) {
+@media only screen and (min-width: 576px) {
+  .footer--area-item_footer h2 {
+    font-size: 1rem;
+  }
+}
+@media only screen and (max-width: 575.99px) {
   .footer--area-item_footer p {
-    font-size: 0.9rem;
+    font-size: 0.7rem;
+  }
+}
+@media only screen and (min-width: 576px) {
+  .footer--area-item_footer p {
+    font-size: 0.7rem;
   }
 }
 

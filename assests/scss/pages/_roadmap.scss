@@ -13,15 +13,35 @@
     padding: 3rem 2rem;
   }
 
+  @include mixin.responsive(sm) {
+    padding: 3rem 2rem;
+  }
+
   &--heading {
     text-align: center;
 
     & > h2 {
       font-weight: 500;
+
+      @include mixin.responsive(xs) {
+        font-size: 1.2rem;
+      }
+
+      @include mixin.responsive(sm) {
+        font-size: 1.2rem;
+      }
     }
 
     & > p {
       font-size: 15px;
+
+      @include mixin.responsive(xs) {
+        font-size: .7rem;
+      }
+
+      @include mixin.responsive(sm) {
+        font-size: .8rem;
+      }
     }
 
     &-line {
@@ -69,6 +89,11 @@
       width: 100%;
     }
 
+    @include mixin.responsive(sm) {
+      width: 100%;
+      padding: .7rem;
+    }
+
     &:hover {
       border-radius: .6rem;
       box-shadow:
@@ -93,6 +118,11 @@
         height: 6rem;
       }
 
+      @include mixin.responsive(sm) {
+        width: 5rem;
+        height: 5rem;
+      }
+
       img {
         width: 5rem;
         height: 5rem;
@@ -102,16 +132,39 @@
           width: 3rem;
           height: 3rem;
         }
+
+        @include mixin.responsive(sm) {
+          width: 3rem;
+          height: 3rem;
+        }
       }
     }
 
     h4 {
       font-weight: 500;
+
+      @include mixin.responsive(xs) {
+        font-size: .95rem;
+      }
+
+      @include mixin.responsive(sm) {
+        font-size: .9rem;
+      }
     }
 
     p {
       font-size: 14px;
       line-height: 1.5;
+
+      @include mixin.responsive(xs) {
+        font-size: .8rem;
+        line-height: 1.2;
+      }
+
+      @include mixin.responsive(sm) {
+        font-size: .8rem;
+        line-height: 1.2;
+      }
     }
   }
 

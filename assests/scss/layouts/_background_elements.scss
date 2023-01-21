@@ -15,6 +15,10 @@
     transition: animation .2s cubic-bezier(0.215, 0.610, 0.355, 1);
     animation: rotate 9s linear infinite;
     z-index: -1;
+
+    @include mixin.responsive(sm) {
+      top: 20%;
+    }
   }
 
   .box2 {
@@ -33,6 +37,12 @@
     @include mixin.responsive(xs) {
       display: none;
     }
+
+    @include mixin.responsive(sm) {
+      top: 27%;
+      left: 64%;
+
+    }
   }
 
   .box3 {
@@ -47,6 +57,11 @@
     transition: animation .2s cubic-bezier(0.215, 0.610, 0.355, 1);
     animation: rotate 9s linear infinite;
     z-index: -1;
+
+    @include mixin.responsive(sm) {
+      bottom: 30%;
+      right: 7%;
+    }
   }
 
   .circle1 {
@@ -61,6 +76,10 @@
     transition: animation .2s cubic-bezier(0.215, 0.610, 0.355, 1);
     animation: rotate 9s linear infinite;
     z-index: -1;
+
+    @include mixin.responsive(sm) {
+      top: 43%;
+    }
   }
 
   .circle2 {
@@ -89,6 +108,10 @@
     transition: animation .2s cubic-bezier(0.215, 0.610, 0.355, 1);
     animation: rotate 9s linear infinite;
     z-index: -1;
+
+    @include mixin.responsive(sm) {
+      right: 28%;
+    }
   }
 
   .circle4 {
@@ -103,6 +126,11 @@
     transition: animation .2s cubic-bezier(0.215, 0.610, 0.355, 1);
     animation: rotate 9s linear infinite;
     z-index: -1;
+
+    @include mixin.responsive(sm) {
+      top: 40%;
+      right: 10%;
+    }
   }
 
   .dot1 {
@@ -123,6 +151,10 @@
     height: .3rem;
     background-color: fun.theme-color();
     z-index: -1;
+
+    @include mixin.responsive(sm) {
+      top: 40%;
+    }
   }
 
   .dot3 {
@@ -133,5 +165,10 @@
     height: .3rem;
     background-color: fun.theme-color();
     z-index: -1;
+
+    @include mixin.responsive(sm) {
+      top: 20%;
+      left: 20%;
+    }
   }
 }

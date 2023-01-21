@@ -3,7 +3,7 @@
   @if $breakpoint ==xs {
 
     // media screen max 576px like moblie viewport
-    @media only screen and (max-width:576px) {
+    @media only screen and (max-width:575.99px) {
       @content;
     }
   }

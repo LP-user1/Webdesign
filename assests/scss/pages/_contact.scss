@@ -14,12 +14,32 @@
     padding: 4rem 3rem;
   }
 
+  @include mixin.responsive(sm) {
+    padding: 4rem 2rem;
+  }
+
   &-heading > h2 {
     font-weight: 400;
+
+    @include mixin.responsive(xs) {
+      font-size: 1.2rem;
+    }
+
+    @include mixin.responsive(sm) {
+      font-size: 1.2rem;
+    }
   }
 
   &-heading > p {
     font-size: 14px;
+
+    @include mixin.responsive(xs) {
+      font-size: .7rem;
+    }
+
+    @include mixin.responsive(sm) {
+      font-size: .7rem;
+    }
   }
 
   &-items {
@@ -33,6 +53,10 @@
     @include mixin.responsive(xs) {
       flex-direction: column-reverse;
       align-items: initial;
+    }
+
+    @include mixin.responsive(sm) {
+      gap: 2rem;
     }
 
     &_img {

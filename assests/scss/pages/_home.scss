@@ -11,8 +11,19 @@
   padding: 8rem 10rem;
 
   @include mixin.responsive(xs) {
+    height: 100%;
     padding: 2rem;
+    gap: 1rem;
+    padding-bottom: 5rem;
     flex-direction: column-reverse;
+  }
+
+  @include mixin.responsive(sm) {
+    height: 100%;
+    padding: 2rem;
+    padding-top: 4rem;
+    flex-direction: column;
+    gap: 3.5rem;
   }
 
   &--container {
@@ -29,7 +40,11 @@
       color: fun.theme-color("default-dark");
 
       @include mixin.responsive(xs) {
-        font-size: 1.4rem;
+        font-size: 1.2rem;
+      }
+
+      @include mixin.responsive(sm) {
+        font-size: 1.2rem;
       }
     }
 
@@ -39,8 +54,13 @@
       color: rgba(128, 128, 128, 0.875);
 
       @include mixin.responsive(xs) {
-        font-size: .9rem;
+        font-size: .8rem;
         line-height: 1.3;
+      }
+
+      @include mixin.responsive(sm) {
+        font-size: .8rem;
+        line-height: 1.5;
       }
     }
 

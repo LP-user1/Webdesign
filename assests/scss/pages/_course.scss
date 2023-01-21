@@ -18,6 +18,11 @@
     padding: 10rem 2rem;
   }
 
+  @include mixin.responsive(sm) {
+    clip-path: polygon(100% 0, 0 4%, 0 100%, 100% 96%);
+    padding: 7rem 2rem;
+  }
+
   &--heading {
     text-align: center;
 
@@ -27,11 +32,19 @@
       @include mixin.responsive(xs) {
         font-size: 1.2rem;
       }
+
+      @include mixin.responsive(sm) {
+        font-size: 1.1rem;
+      }
     }
 
     p {
       @include mixin.responsive(xs) {
         font-size: .9rem;
+      }
+
+      @include mixin.responsive(sm) {
+        font-size: .8rem;
       }
     }
   }
@@ -48,10 +61,18 @@
       flex-direction: column;
     }
 
+    @include mixin.responsive(sm) {
+      flex-direction: column;
+    }
+
     &-card {
       width: 16rem;
       border-radius: 1.5rem;
       background-color: fun.theme-color("default-dark");
+
+      @include mixin.responsive(sm) {
+        width: 14rem;
+      }
 
 
       &_img {
@@ -77,6 +98,25 @@
         padding: 1rem;
         font-size: 14px;
         color: fun.theme-color("default-white");
+
+        h2 {
+
+          @include mixin.responsive(xs) {
+            font-size: .8rem;
+            margin-bottom: .4rem;
+          }
+
+          @include mixin.responsive(sm) {
+            font-size: .8rem;
+            margin-bottom: .4rem;
+          }
+        }
+
+        p {
+          @include mixin.responsive(sm) {
+            font-size: .8rem;
+          }
+        }
       }
     }
   }

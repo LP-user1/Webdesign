@@ -9,6 +9,16 @@
 
   @include mixin.responsive(xs) {
     position: fixed;
+    border-bottom-left-radius: 2rem;
+    border-bottom-right-radius: 2rem;
+    box-shadow: 0 .6px 10px .6px fun.theme-color("default-dark");
+  }
+
+  @include mixin.responsive(sm) {
+    position: fixed;
+    border-bottom-left-radius: 2rem;
+    border-bottom-right-radius: 2rem;
+    box-shadow: 0 .6px 10px .6px fun.theme-color("default-dark");
   }
 
   & > div {
@@ -18,13 +28,21 @@
     padding: 1rem 9rem;
 
     @include mixin.responsive(xs) {
-      padding: 1rem 2rem;
+      padding: .7rem 2rem;
+    }
+
+    @include mixin.responsive(sm) {
+      padding: .8rem 2rem;
     }
 
     & > a h2 {
       font-family: var.$font-shadow-light;
 
       @include mixin.responsive(xs) {
+        font-size: 1rem;
+      }
+
+      @include mixin.responsive(sm) {
         font-size: 1.2rem;
       }
     }
@@ -40,6 +58,11 @@
         display: block;
         font-size: 1rem;
       }
+
+      @include mixin.responsive(sm) {
+        display: block;
+        font-size: 1rem;
+      }
     }
   }
 
@@ -50,6 +73,10 @@
     gap: 1.5rem;
 
     @include mixin.responsive(xs) {
+      display: none;
+    }
+
+    @include mixin.responsive(sm) {
       display: none;
     }
 
