@@ -4,17 +4,16 @@
 
 .header {
   width: 100%;
+  transition: all 500ms cubic-bezier(0.215, 0.610, 0.355, 1);
   z-index: 10;
 
   @include mixin.responsive(xs) {
     border-bottom-left-radius: 2rem;
     border-bottom-right-radius: 2rem;
-    box-shadow: 0 .6px 10px .6px fun.theme-color("default-dark");
   }
 
   @include mixin.responsive(sm) {
     border-radius: 0;
-    box-shadow: 0 .6px 10px .6px fun.theme-color("default-dark");
   }
 
   @include mixin.responsive(md) {
@@ -108,14 +107,15 @@
       width: 80%;
       height: 100%;
       background-color: fun.theme-color("default-white");
-      transition: all 500ms cubic-bezier(0.215, 0.610, 0.355, 1);
       z-index: 9;
       border-top-left-radius: .5rem;
       border-top-right-radius: .5rem;
 
       &.show {
+        transition: all 500ms cubic-bezier(0.215, 0.610, 0.355, 1);
         display: block;
-        top: 9%;
+        top: 7.5%;
+        box-shadow: 0 0 3px 0 fun.theme-color("default-dark");
       }
 
       & li:first-child {
@@ -134,7 +134,7 @@
     @include mixin.responsive(sm) {
       display: none;
       position: fixed;
-      top: 9.4%;
+      top: 15%;
       right: -100%;
       width: 70%;
       height: 100%;
@@ -155,6 +155,10 @@
         text-align: center;
         margin-bottom: 1rem;
       }
+    }
+
+    @include mixin.responsive(md) {
+      top: 9%;
     }
 
     @include mixin.responsive(lg) {
@@ -214,6 +218,7 @@
     left: 0;
     right: 0;
     background-color: fun.theme-color("default-white");
+    box-shadow: 0 0 2px 0 fun.theme-color("default-dark");
   }
 
 }

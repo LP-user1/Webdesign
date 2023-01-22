@@ -16,6 +16,12 @@
       background-color: fun.theme-color("primary-hover") !important;
       color: fun.theme-color("default-white") !important;
     }
+
+    &.active {
+      background-color: fun.theme-color("primary-hover") !important;
+      color: fun.theme-color("default-white") !important;
+
+    }
   }
 
   &-secondary {
@@ -24,6 +30,11 @@
     color: fun.theme-color("default-white") !important;
 
     &:hover {
+      background-color: fun.theme-color("secondary-hover") !important;
+      color: fun.theme-color("default-white") !important;
+    }
+
+    &.active {
       background-color: fun.theme-color("secondary-hover") !important;
       color: fun.theme-color("default-white") !important;
     }
@@ -37,6 +48,11 @@
     transition: all .5s cubic-bezier(0.19, 1, 0.22, 1);
 
     &:hover {
+      background-color: fun.theme-color() !important;
+      color: fun.theme-color("default-white");
+    }
+
+    &.active {
       background-color: fun.theme-color() !important;
       color: fun.theme-color("default-white");
     }
@@ -54,6 +70,11 @@
       color: fun.theme-color("default-white");
     }
 
+    &.active {
+      background-color: fun.theme-color("default-dark-hover") !important;
+      color: fun.theme-color("default-white");
+    }
+
   }
 
   &-outline-dark {
@@ -64,6 +85,11 @@
     transition: all .5s cubic-bezier(0.19, 1, 0.22, 1);
 
     &:hover {
+      background-color: fun.theme-color("default-dark") !important;
+      color: fun.theme-color("default-white");
+    }
+
+    &.active {
       background-color: fun.theme-color("default-dark") !important;
       color: fun.theme-color("default-white");
     }
