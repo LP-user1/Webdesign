@@ -1,18 +1,30 @@
-@mixin responsive($breakpoint) {
+@use "./functions" as fun;
+
+@mixin responsive($breakpoint, $scope: "") {
 
   @if $breakpoint ==xs {
 
     // media screen max 576px like moblie viewport
-    @media only screen and (max-width:575.99px) {
+    @media only screen and (max-width:575.9px) {
       @content;
     }
   }
 
   @else if $breakpoint ==sm {
 
-    // media screen min 576px like big screen mobile
-    @media only screen and (min-width:576px) {
-      @content;
+    @if $scope =="sm-md" {
+
+      @media only screen and (min-width:576px) and (max-width:991.9px) {
+        @content;
+      }
+    }
+
+    @else {
+
+      // media screen min 576px like big screen mobile(Landscape)
+      @media only screen and (min-width:576px) {
+        @content;
+      }
     }
   }
 
@@ -46,5 +58,34 @@
     @media only screen and (min-width:1400px) {
       @content;
     }
+  }
+}
+
+@mixin mob-menu {
+  position: fixed;
+  top: -100%;
+  right: 10%;
+  width: 80%;
+  height: 100%;
+  background-color: fun.theme-color("default-white");
+  z-index: 8;
+  border-top-left-radius: .5rem;
+  border-top-right-radius: .5rem;
+
+  &.show {
+    transition: all 500ms cubic-bezier(0.215, 0.610, 0.355, 1);
+    display: block;
+    top: 7.5%;
+    box-shadow: 0 0 3px 0 fun.theme-color("default-dark");
+  }
+
+  & li:first-child {
+    margin-top: 2rem;
+  }
+
+  & li {
+    text-align: center;
+    margin-bottom: 1rem;
+
   }
 }

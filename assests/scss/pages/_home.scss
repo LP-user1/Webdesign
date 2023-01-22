@@ -21,7 +21,6 @@
   @include mixin.responsive(sm) {
     height: 100%;
     padding: 2rem;
-    padding-top: 4rem;
     flex-direction: column;
     gap: 3.5rem;
   }
@@ -29,7 +28,6 @@
   @include mixin.responsive(md) {
     height: 100%;
     padding: 2rem 3rem;
-    padding-top: 4rem;
     flex-direction: column;
     gap: 3.5rem;
   }
@@ -37,14 +35,14 @@
   @include mixin.responsive(lg) {
     height: 100vh;
     padding: 3rem 4rem;
-    padding-top: 15rem;
+    padding-top: 10rem;
     flex-direction: row;
     gap: 3.5rem;
   }
 
   @include mixin.responsive(xl) {
     padding: 3rem 5rem;
-    padding-top: 17rem;
+    margin-top: 3.5rem;
   }
 
   &--container {
@@ -98,7 +96,7 @@
       }
 
       @include mixin.responsive(lg) {
-        font-size: 1.2rem;
+        font-size: 1rem;
         line-height: 1.7;
       }
     }
@@ -110,7 +108,7 @@
     height: 100%;
 
     @include mixin.responsive(xs) {
-      margin-top: 6rem;
+      margin-top: 4rem;
     }
   }
 }

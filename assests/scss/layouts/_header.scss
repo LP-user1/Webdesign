@@ -5,7 +5,6 @@
 .header {
   width: 100%;
   transition: all 500ms cubic-bezier(0.215, 0.610, 0.355, 1);
-  z-index: 10;
 
   @include mixin.responsive(xs) {
     border-bottom-left-radius: 2rem;
@@ -25,6 +24,7 @@
     display: flex;
     justify-content: space-between;
     padding: 1rem 9rem;
+    z-index: 11;
 
     @include mixin.responsive(xs) {
       padding: .7rem 2rem;
@@ -101,95 +101,25 @@
 
     @include mixin.responsive(xs) {
       display: none;
-      position: fixed;
-      top: -100%;
-      right: 10%;
-      width: 80%;
-      height: 100%;
-      background-color: fun.theme-color("default-white");
-      z-index: 9;
-      border-top-left-radius: .5rem;
-      border-top-right-radius: .5rem;
-
-      &.show {
-        transition: all 500ms cubic-bezier(0.215, 0.610, 0.355, 1);
-        display: block;
-        top: 7.5%;
-        box-shadow: 0 0 3px 0 fun.theme-color("default-dark");
-      }
-
-      & li:first-child {
-        margin-top: 2rem;
-      }
-
-      & li {
-        text-align: center;
-        margin-bottom: 1rem;
-
-      }
-
-
+      @include mixin.mob-menu;
     }
 
-    @include mixin.responsive(sm) {
+    @include mixin.responsive(sm, "sm-md") {
       display: none;
-      position: fixed;
-      top: 15%;
+      @include mixin.mob-menu;
+
+      top: 10%;
       right: -100%;
-      width: 70%;
-      height: 100%;
-      background-color: fun.theme-color("default-white");
-      transition: all 500ms cubic-bezier(0.215, 0.610, 0.355, 1);
-      z-index: 9;
+      width: 50%;
 
       &.show {
-        display: block;
         right: 0;
       }
-
-      & li:first-child {
-        margin-top: 2rem;
-      }
-
-      & li {
-        text-align: center;
-        margin-bottom: 1rem;
-      }
-    }
-
-    @include mixin.responsive(md) {
-      top: 9%;
     }
 
     @include mixin.responsive(lg) {
       display: flex;
-      position: initial;
-      width: 60%;
-      top: 0;
-      right: 0;
-
-      &.show {
-        display: flex;
-      }
-
-      & li:first-child {
-        margin-top: 0;
-      }
-
-      & li {
-        text-align: initial;
-        margin-bottom: 0;
-      }
     }
-
-    @include mixin.responsive(xl) {
-      width: 50%;
-    }
-
-    @include mixin.responsive(xxl) {
-      width: 50%;
-    }
-
 
     &--item {
       list-style: none;
@@ -219,6 +149,7 @@
     right: 0;
     background-color: fun.theme-color("default-white");
     box-shadow: 0 0 2px 0 fun.theme-color("default-dark");
+    z-index: 20;
   }
 
 }
