@@ -62,30 +62,32 @@
 }
 
 @mixin mob-menu {
-  position: fixed;
-  top: -100%;
-  right: 10%;
-  width: 80%;
-  height: 100%;
-  background-color: fun.theme-color("default-white");
-  z-index: 8;
-  border-top-left-radius: .5rem;
-  border-top-right-radius: .5rem;
+  & {
+    position: fixed;
+    top: -100%;
+    right: 10%;
+    width: 80%;
+    height: 100%;
+    background-color: fun.theme-color("default-white");
+    z-index: 8;
+    border-top-left-radius: .5rem;
+    border-top-right-radius: .5rem;
 
-  &.show {
-    transition: all 500ms cubic-bezier(0.215, 0.610, 0.355, 1);
-    display: block;
-    top: 7.5%;
-    box-shadow: 0 0 3px 0 fun.theme-color("default-dark");
-  }
+    &.show {
+      transition: all 500ms cubic-bezier(0.215, 0.610, 0.355, 1);
+      display: block;
+      top: 7.5%;
+      box-shadow: 0 0 3px 0 fun.theme-color("default-dark");
+    }
 
-  & li:first-child {
-    margin-top: 2rem;
-  }
+    & li:first-child {
+      margin-top: 2rem;
+    }
 
-  & li {
-    text-align: center;
-    margin-bottom: 1rem;
+    & li {
+      text-align: center;
+      margin-bottom: 1rem;
 
+    }
   }
 }

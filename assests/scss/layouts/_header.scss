@@ -31,19 +31,19 @@
     }
 
     @include mixin.responsive(sm) {
-      padding: .8rem 2rem;
+      padding: .7rem 2rem;
     }
 
     @include mixin.responsive(md) {
-      padding: .8rem 3rem;
+      padding: .7rem 3rem;
     }
 
     @include mixin.responsive(xl) {
-      padding: .8rem 4rem;
+      padding: .7rem 4rem;
     }
 
     @include mixin.responsive(xxl) {
-      padding: .8rem 6rem;
+      padding: .7rem 6rem;
     }
 
     & > a h2 {
@@ -72,6 +72,7 @@
       @include mixin.responsive(xs) {
         display: block;
         font-size: 1.5rem;
+        z-index: 22;
 
         &.hide {
           display: none;
@@ -81,6 +82,7 @@
       @include mixin.responsive(sm) {
         display: block;
         font-size: 2rem;
+        z-index: 22;
 
         &.hide {
           display: none;
@@ -108,12 +110,17 @@
       display: none;
       @include mixin.mob-menu;
 
-      top: 10%;
-      right: -100%;
-      width: 50%;
+      & {
+        top: 8.32%;
+        right: -100%;
+        width: 50%;
+        border-radius: 0;
 
-      &.show {
-        right: 0;
+        &.show {
+          right: 0;
+          top: 8.32%;
+          z-index: 8;
+        }
       }
     }
 

@@ -124,22 +124,22 @@ body {
 }
 @media only screen and (min-width: 576px) {
   .header > div {
-    padding: 0.8rem 2rem;
+    padding: 0.7rem 2rem;
   }
 }
 @media only screen and (min-width: 768px) {
   .header > div {
-    padding: 0.8rem 3rem;
+    padding: 0.7rem 3rem;
   }
 }
 @media only screen and (min-width: 1200px) {
   .header > div {
-    padding: 0.8rem 4rem;
+    padding: 0.7rem 4rem;
   }
 }
 @media only screen and (min-width: 1400px) {
   .header > div {
-    padding: 0.8rem 6rem;
+    padding: 0.7rem 6rem;
   }
 }
 .header > div > a h2 {
@@ -170,6 +170,7 @@ body {
   .header > div .nav-toggler > i {
     display: block;
     font-size: 1.5rem;
+    z-index: 22;
   }
   .header > div .nav-toggler > i.hide {
     display: none;
@@ -179,6 +180,7 @@ body {
   .header > div .nav-toggler > i {
     display: block;
     font-size: 2rem;
+    z-index: 22;
   }
   .header > div .nav-toggler > i.hide {
     display: none;
@@ -198,6 +200,8 @@ body {
 @media only screen and (max-width: 575.9px) {
   .header--menu {
     display: none;
+  }
+  .header--menu {
     position: fixed;
     top: -100%;
     right: 10%;
@@ -225,6 +229,8 @@ body {
 @media only screen and (min-width: 576px) and (max-width: 991.9px) {
   .header--menu {
     display: none;
+  }
+  .header--menu {
     position: fixed;
     top: -100%;
     right: 10%;
@@ -234,9 +240,6 @@ body {
     z-index: 8;
     border-top-left-radius: 0.5rem;
     border-top-right-radius: 0.5rem;
-    top: 10%;
-    right: -100%;
-    width: 50%;
   }
   .header--menu.show {
     transition: all 500ms cubic-bezier(0.215, 0.61, 0.355, 1);
@@ -251,8 +254,16 @@ body {
     text-align: center;
     margin-bottom: 1rem;
   }
+  .header--menu {
+    top: 8.32%;
+    right: -100%;
+    width: 50%;
+    border-radius: 0;
+  }
   .header--menu.show {
     right: 0;
+    top: 8.32%;
+    z-index: 8;
   }
 }
 @media only screen and (min-width: 992px) {
