@@ -12,12 +12,7 @@ const header = document.querySelector(".header");
 const sections = document.querySelectorAll("section");
 
 // Toggle button Event Listener
-navBtn.addEventListener("click", () => {
-  navMenu.classList.toggle("show");
-  navIcon.forEach((icon) => {
-    icon.classList.toggle("hide");
-  });
-});
+navBtn.addEventListener("click", navToggle);
 
 // Nav menu link Event Listener
 menuLinkLi.forEach((link) => {
@@ -31,12 +26,17 @@ menuLinkLi.forEach((link) => {
     } else {
       e.target.classList.remove("active");
     }
-    navMenu.classList.toggle("show");
-    navIcon.forEach((icon) => {
-      icon.classList.toggle("hide");
-    });
+    navToggle();
   });
 });
+
+// nav toggle function
+function navToggle() {
+  navMenu.classList.toggle("show");
+  navIcon.forEach((icon) => {
+    icon.classList.toggle("hide");
+  });
+}
 
 // Navbar fixed while scroll function
 function navFixed() {
