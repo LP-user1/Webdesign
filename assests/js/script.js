@@ -74,5 +74,12 @@ function navActiveChange() {
   });
 }
 
+// Greetings function
+function greetings() {
+  alert(
+    "Hey Thank you for visiting my web page. This page is a static (dummy-page) web page so no more actions could be included !! Share this web page link to Your friends and beloved ones :)"
+  );
+}
+
 navFixed();
 navActiveChange();
